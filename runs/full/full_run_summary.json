@@ -1,0 +1,134 @@
+{
+  "cache_reuse_records": 176420,
+  "calls_by_role_phase_attempt_outcome_tier": {
+    "enrich|initial|fallback|succeeded|standard": {
+      "attempts": 1,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 7186,
+      "cost_usd": 0.018369,
+      "input_tokens": 7228,
+      "output_tokens": 32,
+      "uncached_input_tokens": 42
+    },
+    "enrich|initial|first|succeeded|standard": {
+      "attempts": 274,
+      "cache_read_tokens": 1404540,
+      "cache_write_tokens": 20808,
+      "cost_usd": 2.184601,
+      "input_tokens": 1853540,
+      "output_tokens": 317989,
+      "uncached_input_tokens": 428192
+    },
+    "enrich|initial|invalid_output_retry|succeeded|standard": {
+      "attempts": 29,
+      "cache_read_tokens": 150858,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.026871,
+      "input_tokens": 156183,
+      "output_tokens": 1292,
+      "uncached_input_tokens": 5325
+    },
+    "enrich|resume|fallback|succeeded|standard": {
+      "attempts": 135,
+      "cache_read_tokens": 955738,
+      "cache_write_tokens": 14372,
+      "cost_usd": 0.351732,
+      "input_tokens": 991257,
+      "output_tokens": 8236,
+      "uncached_input_tokens": 21147
+    },
+    "enrich|resume|first|succeeded|batch": {
+      "attempts": 9410,
+      "cache_read_tokens": 47593098,
+      "cache_write_tokens": 1357722,
+      "cost_usd": 39.686598,
+      "input_tokens": 65415689,
+      "output_tokens": 11290373,
+      "uncached_input_tokens": 16464869
+    },
+    "enrich|resume|invalid_output_retry|succeeded|standard": {
+      "attempts": 1410,
+      "cache_read_tokens": 7329618,
+      "cache_write_tokens": 5202,
+      "cost_usd": 1.395416,
+      "input_tokens": 7624482,
+      "output_tokens": 73258,
+      "uncached_input_tokens": 289662
+    },
+    "enrich|resume|quarantine_repair|succeeded|standard": {
+      "attempts": 1,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 5202,
+      "cost_usd": 0.012096,
+      "input_tokens": 8656,
+      "output_tokens": 428,
+      "uncached_input_tokens": 3454
+    },
+    "group|group|first|succeeded|standard": {
+      "attempts": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.024196,
+      "input_tokens": 15871,
+      "output_tokens": 1665,
+      "uncached_input_tokens": 15871
+    },
+    "memo|memo|first|succeeded|standard": {
+      "attempts": 2,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.061704,
+      "input_tokens": 14542,
+      "output_tokens": 3262,
+      "uncached_input_tokens": 14542
+    },
+    "verify|verify|first|succeeded|standard": {
+      "attempts": 20,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.22331,
+      "input_tokens": 59990,
+      "output_tokens": 10333,
+      "uncached_input_tokens": 59990
+    }
+  },
+  "cost_basis": "provider-reported usage per call x cost/rates.csv (standard or batch tier); not reconciled to an invoice",
+  "direct_record_flags": {
+    "first_pass": 18,
+    "needed_invalid_output_retry": 1646,
+    "quarantine_repair_pass": 18,
+    "quote_normalized_to_exact_source_span": 521,
+    "rule_fix": 501,
+    "stronger_model_fallback": 122
+  },
+  "distinct_texts": 484189,
+  "quarantine_reasons": {
+    "empty_review_text": 13
+  },
+  "record_statuses": {
+    "completed": 660609,
+    "quarantined": 13
+  },
+  "resume_evidence": {
+    "before_is_subset_of_after": true,
+    "checkpoint_after_completed": 660609,
+    "checkpoint_before_completed": 131385,
+    "interrupt": "SIGINT at 16:31:23 local, see terminal_initial_phase.log",
+    "resume_calls_containing_checkpointed_ids": 0
+  },
+  "spending_limits": {
+    "20261004T162102": 3.0,
+    "20261004T163138": 55.0,
+    "20261004T172710": 3.0,
+    "20261004T190641": 0.25,
+    "20261004T190701": 1.0
+  },
+  "total_api_cost_usd": 43.984893,
+  "wall_clock_s_by_invocation": {
+    "20261004T162102": 626.42,
+    "20261004T163138": 3270.227,
+    "20261004T172710": 126.981,
+    "20261004T190641": 6.334,
+    "20261004T190701": 33.616
+  }
+}

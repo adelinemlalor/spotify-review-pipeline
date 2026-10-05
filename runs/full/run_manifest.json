@@ -1,0 +1,180 @@
+{
+  "code_version": {
+    "files_sha256": {
+      "pipeline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pipeline/__main__.py": "7846d90492f5aaef38c7357a7e153e23b5ea64457eb508d5b7364426ba64ec8c",
+      "pipeline/common.py": "d9aff41edec3f124efdaa18e4519cd2ea567934a7b96732bedb76d5e9b05d2e9",
+      "pipeline/config.py": "7e6d9b7791c780c5369e20b393a5c413b3e75f6422ce9e2fd61b7abfdb1cb041",
+      "pipeline/db.py": "e17d841c3703ae643cc8890eeb71c4ac48d73ebddbe7c01cecd4ee89574cec92",
+      "pipeline/enrich.py": "ba63e6b929569a421ddd3160f7c1c3836c543ca28a7c92d8cc9cf8e501ad3122",
+      "pipeline/export.py": "e68093f74fae42221b7bcf93859b2fe24bda4f6449eee5223485e38ee3d13d6f",
+      "pipeline/group.py": "5c37b719576bbc5993ae0a4d0bb9e6533b80bbc610394a7727df6df431fed7f1",
+      "pipeline/llm.py": "ae9f4687805985123450ab0c14dbd2f90dd2fee8ad6c1d5c51e786ced5114005",
+      "pipeline/manifest.py": "adc0d29a8e361e924e0dfac854890e271fad1fb7dde22adbec5859e4b816ef73",
+      "pipeline/memo.py": "fb2779fdef8c349c57a93213bfb3c7565ce287cf9632eeeaa3fe2fbf7909bdc7",
+      "pipeline/prepare.py": "4ea7dc7a50d071797792b9a77bdabc8f0826b9e4b6cb85ea8c85650feb899ef1",
+      "pipeline/rank.py": "e57fb4f86f27e6a13cef276bef84d4c31430822524109ccd9cad07b13336342f",
+      "pipeline/repair.py": "a7495b7d48d6bb106f21c0d357d96930a32cb7491d1ffdf5749be66613e11a96",
+      "pipeline/verify.py": "2c51e60354621656b7549c7e76c2ccb0b5f30a0f6bea498a143eda9772c89c47"
+    },
+    "git_head_at_manifest_time": "408be24f82b380f4d43f71ebba9e937208c48571"
+  },
+  "invocations": [
+    {
+      "budget_usd": 3.0,
+      "command": "/Users/adelinelalor/Documents/Courses/Fundamentals of Agentic AI/Assignment 5/pipeline/__main__.py run --input data/spotify_reviews_18months.csv --run-dir runs/full --stages prepare,enrich --workers 4 --budget 3",
+      "ended_at": "2026-10-04T23:31:29.968+00:00",
+      "mode": "realtime",
+      "phase": "initial",
+      "run_id": "20261004T162102",
+      "started_at": "2026-10-04T23:21:12.180+00:00",
+      "stop_reason": "interrupted_by_user",
+      "wall_s": 626.42,
+      "workers": 4
+    },
+    {
+      "budget_usd": 55.0,
+      "command": "/Users/adelinelalor/Documents/Courses/Fundamentals of Agentic AI/Assignment 5/pipeline/__main__.py run --input data/spotify_reviews_18months.csv --run-dir runs/full --stages prepare,enrich --mode batch --batch-chunk 1000 --budget 55",
+      "ended_at": "2026-10-05T00:26:11.925+00:00",
+      "mode": "batch",
+      "phase": "resume",
+      "run_id": "20261004T163138",
+      "started_at": "2026-10-04T23:31:39.772+00:00",
+      "stop_reason": "completed",
+      "wall_s": 3270.227,
+      "workers": 1
+    },
+    {
+      "budget_usd": 3.0,
+      "command": "/Users/adelinelalor/Documents/Courses/Fundamentals of Agentic AI/Assignment 5/pipeline/__main__.py run --input data/spotify_reviews_18months.csv --run-dir runs/full --stages prepare,verify,group,rank,memo --verify-n 1000 --budget 3",
+      "ended_at": "2026-10-05T00:29:19.773+00:00",
+      "mode": "realtime",
+      "phase": null,
+      "run_id": "20261004T172710",
+      "started_at": "2026-10-05T00:27:10.348+00:00",
+      "stop_reason": null,
+      "wall_s": 126.981,
+      "workers": 1
+    },
+    {
+      "budget_usd": 0.25,
+      "command": "/Users/adelinelalor/Documents/Courses/Fundamentals of Agentic AI/Assignment 5/pipeline/__main__.py repair --run-dir runs/full --budget 0.25",
+      "ended_at": "2026-10-05T02:06:47.737+00:00",
+      "mode": "repair",
+      "phase": "resume",
+      "run_id": "20261004T190641",
+      "started_at": "2026-10-05T02:06:41.402+00:00",
+      "stop_reason": "completed",
+      "wall_s": 6.334,
+      "workers": 1
+    },
+    {
+      "budget_usd": 1.0,
+      "command": "/Users/adelinelalor/Documents/Courses/Fundamentals of Agentic AI/Assignment 5/pipeline/__main__.py run --input data/spotify_reviews_18months.csv --run-dir runs/full --stages prepare,verify,group,rank,memo --verify-n 1000 --budget 1",
+      "ended_at": "2026-10-05T02:07:38.330+00:00",
+      "mode": "realtime",
+      "phase": null,
+      "run_id": "20261004T190701",
+      "started_at": "2026-10-05T02:07:02.123+00:00",
+      "stop_reason": null,
+      "wall_s": 33.616,
+      "workers": 1
+    }
+  ],
+  "label_configs_and_served_model_ids": {
+    "claude-haiku-4-5+enrich-v1+schema-v1+t0": "claude-haiku-4-5-20251001",
+    "claude-haiku-4-5+enrich-v1-repair1+schema-v1+t0": "claude-haiku-4-5-20251001",
+    "claude-haiku-4-5+group-v1": "claude-haiku-4-5-20251001",
+    "claude-sonnet-5-5+enrich-v1+schema-v1+t0": "claude-sonnet-5-5",
+    "claude-sonnet-5-5+memo-v1": "claude-sonnet-5-5",
+    "claude-sonnet-5-5+verify-v1": "claude-sonnet-5-5"
+  },
+  "outputs_sha256": {
+    "grading/calls.jsonl.gz": "a9f68e8a607e4add4f98f3074f069855a7b106e6fccde6787705889b7eb8e8c2",
+    "grading/checkpoint_after.json": "9d657df1d5f6a61784493b7179e91739c38814de37edbdc132b4bd0260f9b7ee",
+    "grading/checkpoint_before.json": "c563149ac8992ab20990fb4b23de1d2b858d37ef0f80b7ed1e2de65ba5d0e737",
+    "grading/claims.csv": "4cd7681948e0332f194f3128f48c4df50ae37e3b5e01e6d843c765d85d98a0a1",
+    "grading/ingestion.json": "5512dd793b0bde3bd51f28b20b440108f3c9bab31233819bea5f32ce19482153",
+    "grading/membership.csv": "a06aa3f5b133cb99f9e7c761113d9a664c6af4d1e179ed88dd56d0a41a2800d4",
+    "grading/ranking.csv": "923b65ca03f0219f3ecfb50e204a9b635555e8f9e5a6bbb10cc6b8ea322b1a64",
+    "grading/records.jsonl.gz": "76321b66afd8b0ce17ee8b3e3fea22412ebb43ad658649ae2d3e65533df94759",
+    "grading/run.json": "09bf8e059a1517c9fd5d01d2ab9f43731b5c8f0f9d51da89daa40288a574645e",
+    "runs/full/outputs/aggregates.csv": "332c6eebad5620ac0f4ea2f768087c194aa6e50fff26e6b801e459231f996302",
+    "runs/full/outputs/claims.csv": "4cd7681948e0332f194f3128f48c4df50ae37e3b5e01e6d843c765d85d98a0a1",
+    "runs/full/outputs/group_evidence_pack.json": "3bec3e76420e91742239a3b9e80cab2624c9ff7ea6182d7221cf2bd4213f6106",
+    "runs/full/outputs/group_mapping.json": "e3c3d28f50b2b3c1601d4c819b779f9499cdae22f25c2e9ff0a9fb27a4376fa6",
+    "runs/full/outputs/membership.csv": "a06aa3f5b133cb99f9e7c761113d9a664c6af4d1e179ed88dd56d0a41a2800d4",
+    "runs/full/outputs/memo.md": "8858060805acbd2fd99bfafb2db3280f21c593980db377b549ff930b9125eace",
+    "runs/full/outputs/memo_check.json": "cc4c7b6373bc960a7056d6d42b64fc2bc06d0a0a52003e5874bfa330a618d6e7",
+    "runs/full/outputs/memo_context.csv": "107c921cb2a608c29bb913ae9f509b03792ac0c8f6c2f892d021233c08dd1679",
+    "runs/full/outputs/memo_inputs.json": "7243ab7329f1bcca88a43da9f0f6845321838ca07ac0b3c2c5e98731e30f1c8c",
+    "runs/full/outputs/monthly_trend.csv": "aed7164162d6eaf93bee5f7ec0819e453c83d0a94a15a04bb075c3f7b92472d7",
+    "runs/full/outputs/quarantine.jsonl": "d307c69cd002e9f87d9c33bdd6dd928eb390c7687d91e93edb393a7cd138f706",
+    "runs/full/outputs/rank_totals.json": "cccbc312b8c6a5bf5fa5728e598d65d059c80094ea3515f21f13b2f6e2dbc523",
+    "runs/full/outputs/ranking.csv": "923b65ca03f0219f3ecfb50e204a9b635555e8f9e5a6bbb10cc6b8ea322b1a64",
+    "runs/full/outputs/topic_rollup.csv": "55a7697a37ca3c2e8a6670a1f53cd2fe2c5719514b024872c828391ae447270b"
+  },
+  "prompts_sha256": {
+    "enrich_retry_v1.md": "c51cf0759c71b8dcc057e97b3d9872695704bd6edf9eb2df165c676839716585",
+    "enrich_v1.md": "5c8d1e634493ae64dc205e1b982aa33c9e8788ec37ccdbafb0fb477adba78c1f",
+    "group_v1.md": "e8b19fbc49cff0cb0c8adf748e5d8dbed29b999f0866ccea45b984baa3226d3c",
+    "memo_v1.md": "ec04737a26a6f426447e43b88636522d65427f15925ad3322e6f9119246e6c9a",
+    "verify_v1.md": "795d012d98a89d1a845503d0cf4ebb21efb04d2327ee4d4385cefe3d7c779067"
+  },
+  "roles": {
+    "enrich": {
+      "effort": "none (thinking off)",
+      "max_output_tokens": 2500,
+      "max_reviews_per_request": 50,
+      "model": "claude-haiku-4-5",
+      "prompt_version": "enrich-v1",
+      "schema_version": "schema-v1",
+      "temperature": 0.0
+    },
+    "enrich_fallback": {
+      "effort": "low (thinking between_tools = off)",
+      "max_fraction": 0.005,
+      "max_output_tokens": 2048,
+      "model": "claude-sonnet-5-5",
+      "prompt_version": "enrich-v1",
+      "schema_version": "schema-v1"
+    },
+    "enrich_repair": {
+      "effort": "none (thinking off)",
+      "max_output_tokens": 2500,
+      "max_reviews_per_request": 50,
+      "model": "claude-haiku-4-5",
+      "prompt_version": "enrich-v1-repair1",
+      "schema_version": "schema-v1",
+      "temperature": 0.0
+    },
+    "group": {
+      "effort": "none (thinking off)",
+      "max_output_tokens": 4096,
+      "model": "claude-haiku-4-5",
+      "prompt_version": "group-v1"
+    },
+    "memo": {
+      "effort": "medium (adaptive thinking)",
+      "max_output_tokens": 8000,
+      "model": "claude-sonnet-5-5",
+      "prompt_version": "memo-v1"
+    },
+    "verify": {
+      "effort": "low (thinking between_tools = off)",
+      "max_output_tokens": 2048,
+      "max_reviews_per_request": 50,
+      "model": "claude-sonnet-5-5",
+      "prompt_version": "verify-v1",
+      "seed": "a5-verify-v1"
+    }
+  },
+  "run_dir": "runs/full",
+  "sdk": "anthropic 1.11.0 (Python 3.14)",
+  "source": {
+    "path": "data/spotify_reviews_18months.csv",
+    "provenance": "BwandoWando, 3.4 Million Spotify Google Store Reviews v2 (CC0), course extract 2022-05-17..2023-11-17",
+    "rows": 660622,
+    "sha256": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6"
+  }
+}

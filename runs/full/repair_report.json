@@ -1,0 +1,13 @@
+{
+  "attempted": 18,
+  "cost_usd": 0.0120965,
+  "errors": {},
+  "label_config": "claude-haiku-4-5+enrich-v1-repair1+schema-v1+t0",
+  "prompt_version": "enrich-v1-repair1",
+  "repaired": 18,
+  "request_ids": [
+    "msg_011CfiGnCFTV5rfojsCYdm4i"
+  ],
+  "run_id": "20261004T190641",
+  "still_quarantined": []
+}

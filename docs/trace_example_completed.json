@@ -265,35 +265,35 @@
  "5_ranking_row": {
   "rank": "1",
   "issue_id": "ISS-billing-premium_restrictions_free_tier",
-  "complaint_count": "55924",
-  "severity_sum": "160920",
-  "mean_severity": "2.877477",
-  "priority_score": "160920"
+  "complaint_count": "55931",
+  "severity_sum": "160941",
+  "mean_severity": "2.877492",
+  "priority_score": "160941"
  },
  "6_claims": [
   {
    "claim_id": "C001",
    "issue_id": "ISS-billing-premium_restrictions_free_tier",
    "metric": "complaint_count",
-   "value": "55924"
+   "value": "55931"
   },
   {
    "claim_id": "C002",
    "issue_id": "ISS-billing-premium_restrictions_free_tier",
    "metric": "severity_sum",
-   "value": "160920"
+   "value": "160941"
   },
   {
    "claim_id": "C003",
    "issue_id": "ISS-billing-premium_restrictions_free_tier",
    "metric": "mean_severity",
-   "value": "2.877477"
+   "value": "2.877492"
   },
   {
    "claim_id": "C004",
    "issue_id": "ISS-billing-premium_restrictions_free_tier",
    "metric": "priority_score",
-   "value": "160920"
+   "value": "160941"
   }
  ],
  "6_memo_mentions_issue": true,

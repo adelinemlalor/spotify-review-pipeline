@@ -7,3 +7,8 @@
 {"run_id": "20261004T172710", "stage": "group", "at": "2026-10-05T00:29:03.406+00:00", "seconds": 23.536, "issues": 44}
 {"run_id": "20261004T172710", "stage": "rank", "at": "2026-10-05T00:29:05.220+00:00", "seconds": 1.813, "issues": 44}
 {"run_id": "20261004T172710", "stage": "memo", "at": "2026-10-05T00:29:17.271+00:00", "seconds": 12.051, "check_passed": true}
+{"run_id": "20261004T190701", "stage": "prepare", "at": "2026-10-05T02:07:02.122+00:00", "seconds": 0.985, "records": 660622, "distinct": 484189}
+{"run_id": "20261004T190701", "stage": "verify", "at": "2026-10-05T02:07:20.125+00:00", "seconds": 1.53, "compared": 1000, "agreement": {"topic": 0.835, "intent": 0.925, "severity": 0.855, "all3": 0.69}}
+{"run_id": "20261004T190701", "stage": "group", "at": "2026-10-05T02:07:20.786+00:00", "seconds": 0.661, "issues": 44}
+{"run_id": "20261004T190701", "stage": "rank", "at": "2026-10-05T02:07:22.667+00:00", "seconds": 1.88, "issues": 44}
+{"run_id": "20261004T190701", "stage": "memo", "at": "2026-10-05T02:07:34.753+00:00", "seconds": 12.086, "check_passed": true}

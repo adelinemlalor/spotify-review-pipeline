@@ -13,7 +13,7 @@ import time
 from collections import Counter
 from pathlib import Path
 
-from . import common, config, db, enrich, export, group, memo, prepare, rank, verify
+from . import common, config, db, enrich, export, group, memo, prepare, rank, repair, verify
 
 STAGES = ("prepare", "enrich", "verify", "group", "rank", "memo")
 
@@ -125,6 +125,19 @@ def cmd_export(a):
     export.export_grading(con, a.run_dir, a.out, a.input, a.before, a.after)
 
 
+def cmd_repair(a):
+    con = db.connect(Path(a.run_dir) / "state.db")
+    run_id = time.strftime("%Y%m%dT%H%M%S")
+    with db.tx(con):
+        con.execute("INSERT INTO runs(run_id, command, started_at, budget_usd, workers, mode) VALUES (?,?,?,?,?,?)",
+                    (run_id, " ".join(sys.argv), common.now(), a.budget, 1, "repair"))
+    t0 = time.monotonic()
+    info = repair.run_repair(con, a.run_dir, run_id, a.budget)
+    with db.tx(con):
+        con.execute("UPDATE runs SET ended_at=?, wall_s=?, stop_reason=?, summary=? WHERE run_id=?",
+                    (common.now(), round(time.monotonic() - t0, 3), "completed", json.dumps(info), run_id))
+
+
 def cmd_status(a):
     con = db.connect(Path(a.run_dir) / "state.db")
     print(dict(con.execute("SELECT COALESCE(r.status,'pending'), COUNT(*) FROM source s LEFT JOIN results r "
@@ -163,6 +176,10 @@ def main():
     e.add_argument("--before", required=True)
     e.add_argument("--after", required=True)
     e.set_defaults(fn=cmd_export)
+    rp = sub.add_parser("repair", help="PAID: declared repair pass for model-output quarantines")
+    rp.add_argument("--run-dir", required=True)
+    rp.add_argument("--budget", type=float, default=0.25)
+    rp.set_defaults(fn=cmd_repair)
     s = sub.add_parser("status")
     s.add_argument("--run-dir", required=True)
     s.set_defaults(fn=cmd_status)

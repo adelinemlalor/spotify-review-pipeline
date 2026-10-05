@@ -227,7 +227,7 @@ def replay(args):
                  f" | {cost:.6f} |")
     L.append("")
     L.append("### Per stage (cold run)\n")
-    L.append("| stage | provider / model | effort | prompt | batch size / workers | attempts | ok | failed | retries | fallbacks | "
+    L.append("| stage | provider / exact model ID(s) served | effort | prompt / schema | batch size / workers | attempts | ok | failed | retries | fallbacks | "
              "reviews sent | uncached in | cache write | cache read | output | call-s summed | USD |")
     L.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     cfg = runs[0]["config"]
@@ -238,7 +238,8 @@ def replay(args):
             continue
         c = cfg[role]
         cold_total += s["cost_usd"]
-        L.append(f"| {role} | anthropic / {c['model']} | {c['effort']} | {c['prompt_version']} | {c.get('batch', '-')} / 1 | "
+        served = ", ".join(sorted({x["model"] for x in calls if x["pilot_run"] == "cold" and x["role"] == role}))
+        L.append(f"| {role} | anthropic / {served} | {c['effort']} | {c['prompt_version']} / {c.get('schema_version', 'line format')} | {c.get('batch', '-')} / 1 | "
                  f"{int(s['attempts'])} | {int(s['succeeded'])} | {int(s['failed'])} | {int(s['retries'])} | "
                  f"{int(s['fallbacks'])} | {int(s['reviews_sent'])} | {int(s['uncached_input'])} | {int(s['cache_write'])} | "
                  f"{int(s['cache_read'])} | {int(s['output'])} | {s['call_seconds_summed']:.2f} | {s['cost_usd']:.6f} |")
@@ -289,6 +290,22 @@ def replay(args):
              "retry); they are never multiplied per review. Realtime hours are MODELED from 1-worker measured throughput x "
              "workers (linear; rate limits can make this slower). Message Batches turnaround is provider-controlled "
              "(most batches finish within 1 hour, max 24 hours) and is reported from the actual run, not modeled here.\n")
+    cap = scen["output_token_cap_per_request"]
+    max_out = max((c["output_tokens"] for c in calls if c["role"] == "enrich"), default=0)
+    L.append(f"Output-token cap check: largest enrichment response in the pilot = {max_out} tokens vs cap {cap} "
+             f"({'OK' if max_out < cap else '**AT/ABOVE CAP: raise the cap or shrink requests**'}).\n")
+    actual = ROOT / "runs" / "full" / "full_run_summary.json"
+    if actual.exists():
+        a = json.loads(actual.read_text())
+        base = next(s for s in proj["scenarios"] if s["scenario"] == "base" and s["reuse"] == "with exact-text reuse")
+        L.append("## Estimate vs actual (full run, measured afterwards)\n")
+        L.append(f"- Pilot-based base estimate (batch tier, with reuse): **${base['total_usd']:.2f}**; 10k refresh estimate: "
+                 f"$40.17 enrichment (batch) + ~$0.26 fixed/verify; **actual: ${a['total_api_cost_usd']:.2f}** "
+                 f"(recomputed from logged usage x rates; includes a realtime initial phase before the interruption, "
+                 f"invalid-output retries, 122 fallback reviews and an 18-review repair pass).")
+        L.append(f"- Actual statuses: {a['record_statuses']}; quarantine reasons: {a['quarantine_reasons']}.")
+        L.append(f"- Actual wall clock by invocation (s): {a['wall_clock_s_by_invocation']}; spending limits (USD): "
+                 f"{a['spending_limits']}. Source: [runs/full/full_run_summary.json](../runs/full/full_run_summary.json).\n")
     for extra in ("refresh_500", "refresh_10000"):
         p = HERE / f"{extra}.md"
         if p.exists():

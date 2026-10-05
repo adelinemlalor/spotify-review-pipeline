@@ -1,34 +1,34 @@
 # Decision memo: next-quarter product priority
 
-**Recommendation** - Put next quarter's effort into billing, specifically ISS-billing-premium_restrictions_free_tier (basic features locked behind premium). It ranks first on the baseline priority score [C004]. As a secondary step, scope a fix for ISS-playback-crashes_or_wont_open and ISS-access-login_failure, which are the most severe issues.
+**Recommendation** - Put the next quarter into **billing**, specifically ISS-billing-premium_restrictions_free_tier (Basic features locked behind premium). Run a smaller, parallel reliability workstream on ISS-playback-crashes_or_wont_open and ISS-access-login_failure, where severity is highest.
 
 ## Why (evidence)
 
-- **Top baseline rank.** ISS-billing-premium_restrictions_free_tier has a priority score of 160920 [C004], from 55924 complaints [C001] at a mean severity of 2.877477 [C003]. It is rank 1 [Q060]. Representative review: (review d4d75528-8b6a-4b0a-8d97-64de27d293fb), which names queue, repeat, playlist order and back as now premium.
-- **Clear lead over the nearest coherent issue.** ISS-usability-ads scores 81682 [C012]. The runner-up, ISS-other-general_criticism, scores 156997 [C008], but it is a catch-all of non-specific dislike (e.g. review 9ae73a34-f3f2-4ec1-80eb-bb514a7a7082) and is hard to act on.
-- **Secondary: cancellation intent.** The billing topic has 11998 cancellation-intent records [Q046], the most of any topic. For this issue alone it is 11079 [Q061]. This is expressed intent in public reviews, not observed behavior.
-- **Secondary: severity mix.** The issue has 818 records at severity 4-5 [Q062]. That is far fewer than the crash and login issues, so severity does not drive this pick. Volume does. A second example: (review 6e67481f-6b1c-4154-b771-0719226b1fb8).
+- **Top baseline rank.** ISS-billing-premium_restrictions_free_tier ranks first [Q060] with a priority score of 160941 [C004], from 55931 complaints [C001] at a mean severity of 2.877492 [C003]. (review e0465e24-c900-44e3-b80c-b0423ac1428f; review 95325c7e-14cf-4e69-bccb-6dc0ca8d67d7)
+- **Clear, coherent theme.** The evidence pack rates this issue's coherence as high. Reviewers name locked controls such as queue, repeat and the back option: "Most of the basic features are now premium - queue, repeat, order of playlist and back option." (review d4d75528-8b6a-4b0a-8d97-64de27d293fb)
+- **Secondary: cancellation intent.** This issue has 11080 cancellation-intent records [Q061]. That is the largest figure among the ranked issues, and it is expressed intent only. The billing topic as a whole has 11999 such records [Q046].
+- **Secondary: severity mix.** Billing has 818 severity 4-5 records for this issue [Q062], so severity is moderate. The top-ranked issue is a volume problem more than a severity problem.
+- **Runner-up is not actionable.** ISS-other-general_criticism ranks second [Q063] with a priority score of 156997 [C008]. Its mean severity is 2.000395 [C007] and it has 4 severity 4-5 records [Q065]. Quotes like "I hate this application" (review 9ae73a34-f3f2-4ec1-80eb-bb514a7a7082) give no specific defect to fix.
 
 ## Alternatives considered
 
-- **Playback:** the topic has 44422 complaint/cancellation records [Q024] at mean severity 3.188690 [Q026]. Its best single issue, ISS-playback-general, scores 29856 [C016] and is labeled low coherence. ISS-playback-crashes_or_wont_open scores 28595 [C020] but has 5153 severity 4-5 records [Q074] (review 7b639ca7-cf2b-4086-b3ec-699d210506aa). That makes it the best candidate for a targeted reliability fix.
-- **Access:** ISS-access-login_failure scores 26101 [C028], rank 7 [Q078]. It has the highest mean severity [C027] and 5751 severity 4-5 records [Q080], but only 6781 complaints [C025].
-- **Usability:** ISS-usability-ads scores 81682 [C012] and ISS-usability-shuffle_and_queue scores 27092 [C024]. Both have lower mean severity [C011][C023] than billing. Part of the shuffle/queue complaint is plausibly the same premium gating (review dcef2a77-b81d-4b30-a235-de5162ce9e06), and its coherence is mixed.
-- **Support:** the topic has 691 complaint/cancellation records [Q048], too small to prioritize now.
-- **Other / general criticism:** ISS-other-general_criticism is rank 2 [Q063] but has only 4 severity 4-5 records [Q065] and no clear fix.
+- **Usability:** ISS-usability-ads ranks third [Q066] with a priority score of 81686 [C012], well below billing. It has 38 severity 4-5 records [Q068]. ISS-usability-shuffle_and_queue (rank 6 [Q075], score 27095 [C024]) has mixed coherence and overlaps with the premium-lock complaints.
+- **Playback:** The topic has 44426 complaint/cancellation records [Q024] and a mean severity of 3.188696 [Q026]. Its top issue, ISS-playback-general, ranks fourth [Q069] with a score of 29856 [C016], but its coherence is low. ISS-playback-crashes_or_wont_open has 5153 severity 4-5 records [Q074] and a score of 28595 [C020] (review 7b639ca7-cf2b-4086-b3ec-699d210506aa). It ranks lower on baseline volume but is the best candidate for a reliability track.
+- **Access:** ISS-access-login_failure ranks seventh [Q078] with a score of 26101 [C028]. It has the highest mean severity of the ranked issues at 3.849137 [C027] and 5751 severity 4-5 records [Q080]. It is a smaller but acute problem, so it is a candidate for a targeted fix.
+- **Support:** The topic has 691 complaint/cancellation records [Q048], so it does not warrant a quarter of effort.
 
 ## Risks and limitations
 
-- The reviews are self-selected, public and historical. They do not represent all users and do not show current behavior.
-- Labels come from a model. A verifier compared 1000 records [Q090]. Agreement was 0.835 on topic [Q091], 0.925 on intent [Q092], 0.855 on severity [Q093] and 0.69 on all three together [Q094]. Severity mean absolute error was 0.15 [Q095].
-- 31 records were quarantined [Q003]: 13 with empty text [Q004] and 18 otherwise unresolved [Q005]. This is small relative to 660591 completed records [Q002].
+- Reviews are self-selected and historical, so they do not represent all users or current behavior.
+- Label quality is imperfect. On a sample of 1000 [Q090], verifier agreement was 0.835 on topic [Q091], 0.925 on intent [Q092], 0.855 on severity [Q093] and 0.69 on all three together [Q094]. The severity mean absolute error was 0.15 [Q095].
+- 13 records were quarantined [Q003], all for empty text [Q004], and 0 were otherwise unresolved [Q005].
 - The first and last months of the data may be partial.
-- There is no revenue or plan-tier data. Free-tier restriction complaints cannot be tied to plan type or business impact from this evidence.
-- Billing and usability overlap (ads and gating both concern the free tier), so category boundaries are imperfect.
+- No revenue or plan-tier data was used, so the free-versus-paid mix of these reviewers is unknown.
+- Cancellation language is expressed intent, not observed behavior.
 
 ## Next steps
 
-- Have product and design review which gated features (queue, repeat, previous track, seek) drive ISS-billing-premium_restrictions_free_tier, and weigh the options for them.
-- Join the review data to plan-tier and experiment data to check the free-tier signal before committing scope.
-- Open a parallel engineering investigation into ISS-playback-crashes_or_wont_open and ISS-access-login_failure, given their severity mix.
-- Manually audit a sample of ISS-other-general_criticism and ISS-playback-general, whose labels are catch-all or low coherence, before using them in planning.
+- Review the premium-gating decisions behind ISS-billing-premium_restrictions_free_tier, starting with queue, repeat and back controls, and decide which to restore or message differently.
+- Assign a small reliability team to ISS-playback-crashes_or_wont_open and ISS-access-login_failure, using the severity 4-5 reviews.
+- Split ISS-playback-general and ISS-other-general_criticism into specific, actionable sub-issues before any investment.
+- Re-check the labels on the billing records with a larger human-reviewed sample before committing to scope.

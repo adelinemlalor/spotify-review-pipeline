@@ -1,0 +1,16 @@
+[prepare] source already loaded (660622 rows); skipping re-ingest
+[verify] declared sample=1000 (seed a5-verify-v1), already verified=1000
+[verify] agreement {'topic': 0.835, 'intent': 0.925, 'severity': 0.855, 'all3': 0.69}, severity MAE 0.15, planted errors caught 195/200
+[group] evidence pack unchanged -> reusing saved issue names (0 model calls)
+[rank] 44 issues ranked -> runs/full/outputs/ranking.csv
+[memo] check passed=True problems=[]
+{
+ "run_id": "20261004T190701",
+ "partial": false,
+ "wall_clock_s": 33.616,
+ "record_statuses": {
+  "completed": 660609,
+  "quarantined": 13
+ },
+ "spend_this_invocation_usd": 0.030892
+}

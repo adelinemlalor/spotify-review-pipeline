@@ -7,7 +7,7 @@
   "distinct_nonempty_texts": 484189,
   "enrich_tier": "batch",
   "max_workers": 4,
-  "output_token_cap_per_request": 4096,
+  "output_token_cap_per_request": 2500,
   "max_fallback_fraction": 0.005,
   "verify_sample_full_run": 1000,
   "base": {"invalid_retry_rate": "measured", "fallback_rate": "measured", "transient_failure_rate": "measured",

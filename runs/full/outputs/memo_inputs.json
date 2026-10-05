@@ -4,25 +4,25 @@
       "claim_id": "C001",
       "issue_id": "ISS-billing-premium_restrictions_free_tier",
       "metric": "complaint_count",
-      "value": "55924"
+      "value": "55931"
     },
     {
       "claim_id": "C002",
       "issue_id": "ISS-billing-premium_restrictions_free_tier",
       "metric": "severity_sum",
-      "value": "160920"
+      "value": "160941"
     },
     {
       "claim_id": "C003",
       "issue_id": "ISS-billing-premium_restrictions_free_tier",
       "metric": "mean_severity",
-      "value": "2.877477"
+      "value": "2.877492"
     },
     {
       "claim_id": "C004",
       "issue_id": "ISS-billing-premium_restrictions_free_tier",
       "metric": "priority_score",
-      "value": "160920"
+      "value": "160941"
     },
     {
       "claim_id": "C005",
@@ -52,25 +52,25 @@
       "claim_id": "C009",
       "issue_id": "ISS-usability-ads",
       "metric": "complaint_count",
-      "value": "38146"
+      "value": "38148"
     },
     {
       "claim_id": "C010",
       "issue_id": "ISS-usability-ads",
       "metric": "severity_sum",
-      "value": "81682"
+      "value": "81686"
     },
     {
       "claim_id": "C011",
       "issue_id": "ISS-usability-ads",
       "metric": "mean_severity",
-      "value": "2.141299"
+      "value": "2.141292"
     },
     {
       "claim_id": "C012",
       "issue_id": "ISS-usability-ads",
       "metric": "priority_score",
-      "value": "81682"
+      "value": "81686"
     },
     {
       "claim_id": "C013",
@@ -124,25 +124,25 @@
       "claim_id": "C021",
       "issue_id": "ISS-usability-shuffle_and_queue",
       "metric": "complaint_count",
-      "value": "9429"
+      "value": "9430"
     },
     {
       "claim_id": "C022",
       "issue_id": "ISS-usability-shuffle_and_queue",
       "metric": "severity_sum",
-      "value": "27092"
+      "value": "27095"
     },
     {
       "claim_id": "C023",
       "issue_id": "ISS-usability-shuffle_and_queue",
       "metric": "mean_severity",
-      "value": "2.873263"
+      "value": "2.873277"
     },
     {
       "claim_id": "C024",
       "issue_id": "ISS-usability-shuffle_and_queue",
       "metric": "priority_score",
-      "value": "27092"
+      "value": "27095"
     },
     {
       "claim_id": "C025",
@@ -172,49 +172,49 @@
       "claim_id": "C029",
       "issue_id": "ISS-playback-stops_or_pauses",
       "metric": "complaint_count",
-      "value": "7609"
+      "value": "7610"
     },
     {
       "claim_id": "C030",
       "issue_id": "ISS-playback-stops_or_pauses",
       "metric": "severity_sum",
-      "value": "24236"
+      "value": "24240"
     },
     {
       "claim_id": "C031",
       "issue_id": "ISS-playback-stops_or_pauses",
       "metric": "mean_severity",
-      "value": "3.185175"
+      "value": "3.185283"
     },
     {
       "claim_id": "C032",
       "issue_id": "ISS-playback-stops_or_pauses",
       "metric": "priority_score",
-      "value": "24236"
+      "value": "24240"
     },
     {
       "claim_id": "C033",
       "issue_id": "ISS-playback-skips_or_wrong_song",
       "metric": "complaint_count",
-      "value": "7776"
+      "value": "7778"
     },
     {
       "claim_id": "C034",
       "issue_id": "ISS-playback-skips_or_wrong_song",
       "metric": "severity_sum",
-      "value": "23667"
+      "value": "23673"
     },
     {
       "claim_id": "C035",
       "issue_id": "ISS-playback-skips_or_wrong_song",
       "metric": "mean_severity",
-      "value": "3.043596"
+      "value": "3.043584"
     },
     {
       "claim_id": "C036",
       "issue_id": "ISS-playback-skips_or_wrong_song",
       "metric": "priority_score",
-      "value": "23667"
+      "value": "23673"
     },
     {
       "claim_id": "C037",
@@ -250,12 +250,12 @@
     {
       "id": "Q002",
       "quantity": "records: completed",
-      "value": "660591"
+      "value": "660609"
     },
     {
       "id": "Q003",
       "quantity": "records: quarantined",
-      "value": "31"
+      "value": "13"
     },
     {
       "id": "Q004",
@@ -265,22 +265,22 @@
     {
       "id": "Q005",
       "quantity": "records: other_unresolved",
-      "value": "18"
+      "value": "0"
     },
     {
       "id": "Q006",
       "quantity": "completed complaint or cancellation records",
-      "value": "291185"
+      "value": "291203"
     },
     {
       "id": "Q007",
       "quantity": "completed records with intent=cancellation",
-      "value": "25321"
+      "value": "25322"
     },
     {
       "id": "Q008",
       "quantity": "completed records with intent=complaint",
-      "value": "265864"
+      "value": "265881"
     },
     {
       "id": "Q009",
@@ -315,7 +315,7 @@
     {
       "id": "Q015",
       "quantity": "topic access: share of all complaint/cancellation records (fraction)",
-      "value": "0.031643"
+      "value": "0.031641"
     },
     {
       "id": "Q016",
@@ -330,22 +330,22 @@
     {
       "id": "Q018",
       "quantity": "topic usability: complaint/cancellation records",
-      "value": "67688"
+      "value": "67693"
     },
     {
       "id": "Q019",
       "quantity": "topic usability: severity_sum",
-      "value": "157847"
+      "value": "157858"
     },
     {
       "id": "Q020",
       "quantity": "topic usability: mean severity",
-      "value": "2.331979"
+      "value": "2.331969"
     },
     {
       "id": "Q021",
       "quantity": "topic usability: share of all complaint/cancellation records (fraction)",
-      "value": "0.232457"
+      "value": "0.232460"
     },
     {
       "id": "Q022",
@@ -360,22 +360,22 @@
     {
       "id": "Q024",
       "quantity": "topic playback: complaint/cancellation records",
-      "value": "44422"
+      "value": "44426"
     },
     {
       "id": "Q025",
       "quantity": "topic playback: severity_sum",
-      "value": "141648"
+      "value": "141661"
     },
     {
       "id": "Q026",
       "quantity": "topic playback: mean severity",
-      "value": "3.188690"
+      "value": "3.188696"
     },
     {
       "id": "Q027",
       "quantity": "topic playback: share of all complaint/cancellation records (fraction)",
-      "value": "0.152556"
+      "value": "0.152560"
     },
     {
       "id": "Q028",
@@ -385,7 +385,7 @@
     {
       "id": "Q029",
       "quantity": "topic playback: severity 4-5 records",
-      "value": "11239"
+      "value": "11240"
     },
     {
       "id": "Q030",
@@ -405,7 +405,7 @@
     {
       "id": "Q033",
       "quantity": "topic downloads: share of all complaint/cancellation records (fraction)",
-      "value": "0.019558"
+      "value": "0.019557"
     },
     {
       "id": "Q034",
@@ -420,17 +420,17 @@
     {
       "id": "Q036",
       "quantity": "topic catalog: complaint/cancellation records",
-      "value": "16121"
+      "value": "16122"
     },
     {
       "id": "Q037",
       "quantity": "topic catalog: severity_sum",
-      "value": "43308"
+      "value": "43311"
     },
     {
       "id": "Q038",
       "quantity": "topic catalog: mean severity",
-      "value": "2.686434"
+      "value": "2.686453"
     },
     {
       "id": "Q039",
@@ -450,27 +450,27 @@
     {
       "id": "Q042",
       "quantity": "topic billing: complaint/cancellation records",
-      "value": "64634"
+      "value": "64642"
     },
     {
       "id": "Q043",
       "quantity": "topic billing: severity_sum",
-      "value": "184809"
+      "value": "184833"
     },
     {
       "id": "Q044",
       "quantity": "topic billing: mean severity",
-      "value": "2.859316"
+      "value": "2.859333"
     },
     {
       "id": "Q045",
       "quantity": "topic billing: share of all complaint/cancellation records (fraction)",
-      "value": "0.221969"
+      "value": "0.221983"
     },
     {
       "id": "Q046",
       "quantity": "topic billing: cancellation-intent records",
-      "value": "11998"
+      "value": "11999"
     },
     {
       "id": "Q047",
@@ -525,7 +525,7 @@
     {
       "id": "Q057",
       "quantity": "topic other: share of all complaint/cancellation records (fraction)",
-      "value": "0.284081"
+      "value": "0.284063"
     },
     {
       "id": "Q058",
@@ -545,7 +545,7 @@
     {
       "id": "Q061",
       "quantity": "ISS-billing-premium_restrictions_free_tier: cancellation-intent records",
-      "value": "11079"
+      "value": "11080"
     },
     {
       "id": "Q062",
@@ -655,7 +655,7 @@
     {
       "id": "Q083",
       "quantity": "ISS-playback-stops_or_pauses: severity 4-5 records",
-      "value": "1418"
+      "value": "1419"
     },
     {
       "id": "Q084",

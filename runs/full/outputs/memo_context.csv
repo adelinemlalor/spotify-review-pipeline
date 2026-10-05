@@ -1,50 +1,50 @@
 id,quantity,value
 Q001,records: source_rows,660622
-Q002,records: completed,660591
-Q003,records: quarantined,31
+Q002,records: completed,660609
+Q003,records: quarantined,13
 Q004,records: empty_text_quarantined,13
-Q005,records: other_unresolved,18
-Q006,completed complaint or cancellation records,291185
-Q007,completed records with intent=cancellation,25321
-Q008,completed records with intent=complaint,265864
+Q005,records: other_unresolved,0
+Q006,completed complaint or cancellation records,291203
+Q007,completed records with intent=cancellation,25322
+Q008,completed records with intent=complaint,265881
 Q009,completed records with intent=praise,293265
 Q010,completed records with intent=request,18065
 Q011,completed records with intent=unclear,58076
 Q012,topic access: complaint/cancellation records,9214
 Q013,topic access: severity_sum,34712
 Q014,topic access: mean severity,3.767311
-Q015,topic access: share of all complaint/cancellation records (fraction),0.031643
+Q015,topic access: share of all complaint/cancellation records (fraction),0.031641
 Q016,topic access: cancellation-intent records,383
 Q017,topic access: severity 4-5 records,6940
-Q018,topic usability: complaint/cancellation records,67688
-Q019,topic usability: severity_sum,157847
-Q020,topic usability: mean severity,2.331979
-Q021,topic usability: share of all complaint/cancellation records (fraction),0.232457
+Q018,topic usability: complaint/cancellation records,67693
+Q019,topic usability: severity_sum,157858
+Q020,topic usability: mean severity,2.331969
+Q021,topic usability: share of all complaint/cancellation records (fraction),0.232460
 Q022,topic usability: cancellation-intent records,3995
 Q023,topic usability: severity 4-5 records,466
-Q024,topic playback: complaint/cancellation records,44422
-Q025,topic playback: severity_sum,141648
-Q026,topic playback: mean severity,3.188690
-Q027,topic playback: share of all complaint/cancellation records (fraction),0.152556
+Q024,topic playback: complaint/cancellation records,44426
+Q025,topic playback: severity_sum,141661
+Q026,topic playback: mean severity,3.188696
+Q027,topic playback: share of all complaint/cancellation records (fraction),0.152560
 Q028,topic playback: cancellation-intent records,2233
-Q029,topic playback: severity 4-5 records,11239
+Q029,topic playback: severity 4-5 records,11240
 Q030,topic downloads: complaint/cancellation records,5695
 Q031,topic downloads: severity_sum,19189
 Q032,topic downloads: mean severity,3.369447
-Q033,topic downloads: share of all complaint/cancellation records (fraction),0.019558
+Q033,topic downloads: share of all complaint/cancellation records (fraction),0.019557
 Q034,topic downloads: cancellation-intent records,203
 Q035,topic downloads: severity 4-5 records,2264
-Q036,topic catalog: complaint/cancellation records,16121
-Q037,topic catalog: severity_sum,43308
-Q038,topic catalog: mean severity,2.686434
+Q036,topic catalog: complaint/cancellation records,16122
+Q037,topic catalog: severity_sum,43311
+Q038,topic catalog: mean severity,2.686453
 Q039,topic catalog: share of all complaint/cancellation records (fraction),0.055363
 Q040,topic catalog: cancellation-intent records,708
 Q041,topic catalog: severity 4-5 records,184
-Q042,topic billing: complaint/cancellation records,64634
-Q043,topic billing: severity_sum,184809
-Q044,topic billing: mean severity,2.859316
-Q045,topic billing: share of all complaint/cancellation records (fraction),0.221969
-Q046,topic billing: cancellation-intent records,11998
+Q042,topic billing: complaint/cancellation records,64642
+Q043,topic billing: severity_sum,184833
+Q044,topic billing: mean severity,2.859333
+Q045,topic billing: share of all complaint/cancellation records (fraction),0.221983
+Q046,topic billing: cancellation-intent records,11999
 Q047,topic billing: severity 4-5 records,2975
 Q048,topic support: complaint/cancellation records,691
 Q049,topic support: severity_sum,2011
@@ -55,11 +55,11 @@ Q053,topic support: severity 4-5 records,118
 Q054,topic other: complaint/cancellation records,82720
 Q055,topic other: severity_sum,165382
 Q056,topic other: mean severity,1.999299
-Q057,topic other: share of all complaint/cancellation records (fraction),0.284081
+Q057,topic other: share of all complaint/cancellation records (fraction),0.284063
 Q058,topic other: cancellation-intent records,5740
 Q059,topic other: severity 4-5 records,4
 Q060,ISS-billing-premium_restrictions_free_tier: rank,1
-Q061,ISS-billing-premium_restrictions_free_tier: cancellation-intent records,11079
+Q061,ISS-billing-premium_restrictions_free_tier: cancellation-intent records,11080
 Q062,ISS-billing-premium_restrictions_free_tier: severity 4-5 records,818
 Q063,ISS-other-general_criticism: rank,2
 Q064,ISS-other-general_criticism: cancellation-intent records,4040
@@ -81,7 +81,7 @@ Q079,ISS-access-login_failure: cancellation-intent records,263
 Q080,ISS-access-login_failure: severity 4-5 records,5751
 Q081,ISS-playback-stops_or_pauses: rank,8
 Q082,ISS-playback-stops_or_pauses: cancellation-intent records,552
-Q083,ISS-playback-stops_or_pauses: severity 4-5 records,1418
+Q083,ISS-playback-stops_or_pauses: severity 4-5 records,1419
 Q084,ISS-playback-skips_or_wrong_song: rank,9
 Q085,ISS-playback-skips_or_wrong_song: cancellation-intent records,453
 Q086,ISS-playback-skips_or_wrong_song: severity 4-5 records,368

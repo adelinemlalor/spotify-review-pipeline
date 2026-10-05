@@ -6,7 +6,7 @@ check). Four separate model roles do the language work: **enrich**, **verify**, 
 its own versioned prompt, inputs, outputs and saved evidence.
 
 > **Decision (from the full run):** put next quarter's effort into **billing / free-tier feature gating**:
-> `ISS-billing-premium_restrictions_free_tier`, rank 1, 55,924 complaints, mean severity 2.877477, priority 160,920.
+> `ISS-billing-premium_restrictions_free_tier`, rank 1, 55,931 complaints, mean severity 2.877492, priority 160,941.
 > Run a parallel reliability fix on `ISS-playback-crashes_or_wont_open` and `ISS-access-login_failure`, which have
 > the highest severities. See the [decision memo](runs/full/outputs/memo.md).
 
@@ -15,23 +15,23 @@ its own versioned prompt, inputs, outputs and saved evidence.
 | | value | evidence |
 |---|---|---|
 | Source rows ingested | 660,622 (sha256 `1fc85de6…2fcef6` matches manifest), 0 duplicate IDs, 13 empty texts, 159,701 missing app versions | [`runs/full/ingestion_report.json`](runs/full/ingestion_report.json), [`grading/ingestion.json`](grading/ingestion.json) |
-| **Completed classifications** | **660,591 / 660,609 nonempty (99.9973%)** | [`grading/records.jsonl.gz`](grading/records.jsonl.gz) |
-| Quarantined | 31 = 13 `empty_review_text` + **18 model-output failures** (quote never validated after retry and fallback). These are not counted as completed. | [`runs/full/outputs/quarantine.jsonl`](runs/full/outputs/quarantine.jsonl) |
+| **Completed classifications** | **660,609 / 660,609 nonempty (100%)** | [`grading/records.jsonl.gz`](grading/records.jsonl.gz) |
+| Quarantined | **13**, all `empty_review_text`. 18 first-pass model-output failures (quote never validated after retry and fallback) were fixed by a declared, logged [repair pass](#repair-pass-for-model-output-failures) | [`runs/full/outputs/quarantine.jsonl`](runs/full/outputs/quarantine.jsonl) |
 | Exact-text reuse | 484,189 distinct texts sent; 176,420 rows reuse a validated result via `cache_source_id` | self-check `valid_cache_reuses` |
 | Independent verifier (Sonnet 5.5, 1,000 seeded sample) | agreement topic 0.835, intent 0.925, severity 0.855, all three 0.69; severity MAE 0.15 | [`runs/full/verify/verify_report.json`](runs/full/verify/verify_report.json) |
 | Planted-error test | 195 / 200 deliberately wrong topics flagged | same file, `planted_error_test` |
 | Golden 50 (author's hand labels) | topic **0.88**, intent **0.84**, severity **0.82** (within-1 0.98, MAE 0.20), all three 0.70; 14 ambiguous | [Golden 50](#golden-50-evaluation) |
-| Full-run cost (measured, from provider usage × [rates](cost/rates.csv)) | **$43.94**: enrichment $43.66 (batch $39.69, realtime $2.19, retries $1.42, fallback $0.37) + verify/group/memo $0.28 | [`grading/calls.jsonl.gz`](grading/calls.jsonl.gz), [`runs/full/run_summary_*.json`](runs/full/) |
+| Full-run cost (measured, from provider usage × [rates](cost/rates.csv)) | **$43.98**: enrichment $43.68 (batch $39.69, realtime $2.18, retries $1.42, fallback $0.37, repair $0.01) + verify $0.22, group $0.02, memo $0.06 · consolidated in [`full_run_summary.json`](runs/full/full_run_summary.json), manifest in [`run_manifest.json`](runs/full/run_manifest.json) | [`grading/calls.jsonl.gz`](grading/calls.jsonl.gz), [`runs/full/run_summary_*.json`](runs/full/) |
 | Full-run time (clock) | initial phase 626 s (realtime, 4 workers, interrupted) + resume 3,270 s (Message Batches) + downstream 127 s ≈ **67 min** | [`runs/full/terminal_*.log`](runs/full/) |
-| All API spend for the assignment | $45.68 (pilot $0.064, 500 $0.129, 10k $1.497, batch-API test $0.044, system tests $0.003, full $43.94) plus <$0.01 of untracked key smoke tests | per-run `state.db` → `calls` |
-| Zero-API self-check | `working_coverage_point_candidate: 1.0`; status `review_required` for two explained items (below) | [`docs/self-check-summary.md`](docs/self-check-summary.md) |
+| All API spend for the assignment | $45.72 (pilot $0.064, 500 $0.129, 10k $1.497, batch-API test $0.044, system tests $0.003, full $43.98) plus <$0.01 of untracked key smoke tests | per-run `state.db` → `calls` |
+| Zero-API self-check | `working_coverage_point_candidate: 1.0`, labelable completion 1.0; status `review_required` for one explained item (below) | [`docs/self-check-summary.md`](docs/self-check-summary.md) |
 
 ## Rubric → evidence map
 
 | Rubric item | Where to look |
 |---|---|
 | **D1 Accessible code/setup/artifacts** | [Setup](#setup) · [Commands](#commands) · `requirements.txt` · `.env.example` · `.gitignore` · all outputs committed (`grading/`, `cost/`, `runs/*/outputs`, `evals/`) |
-| **D2 Architecture, shared schema, provenance** | [Architecture](#architecture) · [`docs/labels_and_schema.md`](docs/labels_and_schema.md) · prompts in [`pipeline/prompts/`](pipeline/prompts) · `label_config` on every record and call · row hashes via the provided `row_sha` · [trace](#one-review-traced-end-to-end) |
+| **D2 Architecture, shared schema, provenance** | [Architecture](#architecture) · [`run_manifest.json`](runs/full/run_manifest.json) (source checksum, code/prompt hashes, models, settings, invocations, output hashes) · [`docs/labels_and_schema.md`](docs/labels_and_schema.md) · prompts in [`pipeline/prompts/`](pipeline/prompts) · `label_config` on every record and call · row hashes via the provided `row_sha` · [trace](#one-review-traced-end-to-end) |
 | **D3 Memo numbers linked to calculations and sources** | [`memo.md`](runs/full/outputs/memo.md) cites `[C###]` → [`grading/claims.csv`](grading/claims.csv) (checked by `check_submission.py`) and `[Q###]` → [`memo_context.csv`](runs/full/outputs/memo_context.csv). Code check: [`memo_check.json`](runs/full/outputs/memo_check.json) |
 | **D4 Recommendation, alternatives, limitations** | memo sections; [Limitations](#limitations) |
 | **T1 50 human labels, per-field comparison, error analysis** | [Golden 50](#golden-50-evaluation) · [`evals/golden_50_human_labels.csv`](evals/golden_50_human_labels.csv) · [`evals/golden_eval/`](evals/golden_eval) · [`evals/eval_golden.py`](evals/eval_golden.py) |
@@ -70,6 +70,7 @@ cp data/check_submission.py . && python3 check_submission.py check --reference l
 .venv/bin/python evals/eval_golden.py --predictions grading/records.jsonl.gz          # after the golden labels are filled
 .venv/bin/python evals/trace_review.py <review_id>                                    # follow one review through every artifact
 .venv/bin/python -m tests.test_offline                                                # orchestration tests with a mock model
+.venv/bin/python -m pipeline.manifest --run-dir runs/full --grading grading           # run manifest + consolidated summary
 ```
 
 **Paid (explicit; makes model calls):**
@@ -78,6 +79,7 @@ cp data/check_submission.py . && python3 check_submission.py check --reference l
 .venv/bin/python -m pipeline run --input <any.csv> --run-dir runs/<name> --budget 5 --workers 4    # all six stages
 .venv/bin/python -m pipeline run --input data/spotify_reviews_18months.csv --run-dir runs/full --stages prepare,enrich --mode batch --batch-chunk 1000 --budget 55
 .venv/bin/python evals/run_system_tests.py --i-understand-this-costs-money             # injection + planted faults
+.venv/bin/python -m pipeline repair --run-dir runs/full --budget 0.25                  # declared repair of model-output quarantines
 ```
 The saved program accepts **any CSV with the six source columns** and runs every stage without manual pasting.
 Rerunning the same command resumes: completed IDs are never re-sent under an unchanged `label_config`.
@@ -134,15 +136,26 @@ Review `d4d75528-8b6a-4b0a-8d97-64de27d293fb` ([full trace](docs/trace_example_c
 1. **Source:** a 1-star review from 2023-10-22: "*Most of the basic features are now premium - queue, repeat, order of playlist and back option… I recommend users to use apps like YT Music…*". Row hash `42d3fe32…91791e`.
 2. **Enrichment:** Haiku request `msg_011Cfi8FxfNNs9EarDudHbzp` (50 reviews, Message Batches, resume phase) returned `billing / premium_restrictions_free_tier / cancellation / -0.7 / 3`. Code validated it. Entities extracted by code: `ads, playlist, queue, premium, recommendations, update`.
 3. **Membership:** `ISS-billing-premium_restrictions_free_tier` in [`grading/membership.csv`](grading/membership.csv).
-4. **Ranking:** rank 1, `55924, 160920, 2.877477, 160920` in [`grading/ranking.csv`](grading/ranking.csv).
-5. **Memo claim:** cited in the memo as representative evidence next to `[C001]–[C004]`.
+4. **Ranking:** rank 1, `55931, 160941, 2.877492, 160941` in [`grading/ranking.csv`](grading/ranking.csv).
+5. **Memo claim:** quoted in the memo as evidence for the coherent theme, next to the issue's `[C001]`, `[C003]` and `[C004]` claims.
 
-**Failed case** ([trace](docs/trace_example_quarantined.json)): review `9cb80114-…` is written in Unicode
-"mathematical monospace" letters (`𝙼𝚢 𝚜𝚙𝚘𝚝𝚒𝚏𝚢 𝚙𝚛𝚎𝚖𝚒𝚞𝚖…`). Haiku's first answer and its retry quoted it in ordinary
+**Failed case** ([trace as of the first pass](docs/trace_example_quarantined.json)): review `9cb80114-…` is written in
+Unicode "mathematical monospace" letters (`𝙼𝚢 𝚜𝚙𝚘𝚝𝚒𝚏𝚢 𝚙𝚛𝚎𝚖𝚒𝚞𝚖…`). Haiku's first answer and its retry quoted it in ordinary
 letters, which is not an exact substring. The Sonnet fallback did the same. Code therefore quarantined it with reason
-`invalid_model_output_after_retry: quote is not an exact substring` and 3 logged attempts, instead of accepting an
-unsupported quote. The other 17 failures are the same pattern: stylized Unicode, Bengali script, or curly/straight
-quote substitutions inside long reviews.
+`invalid_model_output_after_retry: quote is not an exact substring` after 3 logged attempts, instead of accepting an
+unsupported quote. The other 17 first-pass failures were the same pattern: stylized Unicode, Bengali script, or
+curly/straight quote substitutions inside long reviews.
+
+### Repair pass for model-output failures
+
+After the full run, the 18 failures were sent once more as a declared repair (`python -m pipeline repair --run-dir runs/full`,
+prompt version `enrich-v1-repair1`, its own `label_config`, logged as `role=enrich, phase=resume`, 1 request, $0.012).
+The only change is an instruction that the quote field must be `*` (the whole review, an exact substring by construction).
+All 18 validated: for example, `9cb80114-…` became playback / stops_or_pauses / complaint / 4. Each repaired record keeps
+`review_flags: ["quarantine_repair_pass", "first_pass: <original reason>"]`, and the details are in
+[`runs/full/repair_report.json`](runs/full/repair_report.json). Downstream stages were rerun afterwards. Verification and
+issue names were reused from the cache, and only the memo was regenerated ($0.03); see
+[`terminal_downstream_after_repair.log`](runs/full/terminal_downstream_after_repair.log).
 
 ## Golden 50 evaluation
 
@@ -169,7 +182,8 @@ every disagreement (`evals/golden_eval/`).
 | severity exact / within 1 | **0.82** / 0.98 · MAE 0.20 |
 | all three correct | 0.70 |
 | sentiment | MAE 0.222; 34/50 within the predeclared ±0.3 |
-| evidence quote exact substring | 50/50 (support for the label checked by hand in the disagreement review below) |
+| evidence quote exact substring | 50/50; 41 whole-review quotes, 9 excerpts, all 9 read and found to support the label ([inspection](evals/golden_eval/quote_entity_inspection.md)) |
+| entities | code keyword matches, so none is invented; 12/50 differ from the author's entity words, mostly vocabulary ([inspection](evals/golden_eval/quote_entity_inspection.md)) |
 | needs_review agreement | 30/50 (model flagged 8) |
 | ambiguous cases (author-marked, with alternative labels) | 14 |
 
@@ -183,7 +197,7 @@ topic 0.86 / intent 0.78 / severity 0.84 ([v1 report](evals/golden_eval/golden_r
 1. **Severity under-rating of blocked free-tier use (5 cases, human 4 → model 3).** Examples: "*we can't choose our
    fvrt songs*" and "*everything basic features is premium*". The prompt deliberately maps forced shuffle and skip
    limits to severity 3 (restricted, some use remains). The author read several of these as a blocked core task. This
-   is a rubric-interpretation gap, not random noise. Effect on the decision: the top issue's mean severity (2.877477)
+   is a rubric-interpretation gap, not random noise. Effect on the decision: the top issue's mean severity (2.877492)
    is, if anything, understated, so its rank-1 position would not change.
 2. **Political/boycott text (3 cases).** "*I hate this app and sweden…*" and "*Banning conservative music…*" are human
    complaint/2, model unclear/1. "*We are boycotting Swedish app…*" is human complaint, model cancellation. The model
@@ -239,26 +253,26 @@ politically motivated reviews.
    instead. Every request it made was saved and is logged as `phase: initial`.)
 2. **Resume (Message Batches).** [`terminal_resume_phase.log`](runs/full/terminal_resume_phase.log): `phase=resume`,
    cache_hits 0, **470,489 distinct pending texts** (no completed text re-sent), 10 batches. The final checkpoint
-   [`checkpoint_after.json`](grading/checkpoint_after.json) has **660,591 completed IDs**. Every resume call lists only
+   [`checkpoint_after.json`](grading/checkpoint_after.json) has **660,609 completed IDs** (taken after the repair pass). Every resume call lists only
    IDs that were not in `checkpoint_before` (the checker's `reprocessed_checkpoint` reports 0).
 3. **Warm rerun of the pilot:** 0 new enrichment, verify, group or memo calls; 0.11 s; $0.
 
 ## Self-check notes
 
-`check_submission.py check` reports coverage 1.0 (all 660,622 IDs, 0 missing/duplicate/foreign, 660,591 valid, 31
-quarantined, 176,420 valid cache reuses). It reports `review_required` for two expected, disclosed items:
-- `unfinished_classification: 18`: the 18 model-output quarantines described above.
-- `call_config_mismatch: 244`: 122 reviews (0.025% of distinct texts) whose Haiku output failed validation twice were
-  completed by the declared Sonnet 5.5 fallback. Their records carry the fallback's `label_config`. The two earlier Haiku
-  calls that also contained these IDs are logged truthfully under the Haiku `label_config` (122 × 2 = 244). These
-  calls are not hidden or relabeled.
+`check_submission.py check` reports coverage 1.0 (all 660,622 IDs, 0 missing/duplicate/foreign, **660,609 valid**, 13
+quarantined, 176,420 valid cache reuses, labelable completion 1.0). It reports `review_required` for one expected,
+disclosed item:
+- `call_config_mismatch: 298`. 122 reviews (0.025% of distinct texts) whose Haiku output failed validation twice were
+  completed by the declared Sonnet 5.5 fallback, and 18 more by the repair pass. Their records carry the `label_config`
+  of the call that produced them. The earlier attempts that also contained these IDs are logged truthfully under their
+  own `label_config` (122 × 2 + 18 × 3 = 298). These calls are not hidden or relabeled.
 
 ## Ranking scope and trend
 
 Baseline as specified: completed `complaint` + `cancellation` records only (291,185), each in exactly one issue
 (`allow_multi_issue: false`), priority = severity_sum = count × mean, sorted by descending score then ascending issue ID.
-Praise (293,265), requests (18,065) and unclear (58,076) are excluded. Issues = fixed (topic, subtopic) pairs, 44 of
-them. Top 5: free-tier gating 160,920 · general criticism 156,997 · ads 81,682 · playback/general 29,856 · crashes
+Praise (293,265), requests (18,065) and unclear (58,076) are excluded; 291,203 records are ranked. Issues = fixed (topic, subtopic) pairs, 44 of
+them. Top 5: free-tier gating 160,941 · general criticism 156,997 · ads 81,686 · playback/general 29,856 · crashes
 28,595.
 
 Monthly shares ([`monthly_trend.csv`](runs/full/outputs/monthly_trend.csv), denominator = that month's
@@ -279,8 +293,11 @@ generic negative reviews ("Hate this application 👎" alone ×1,415), which inf
   which is valid (exact) but less precise.
 - Entities are deterministic keyword matches, so they are always present in the text but can be false positives
   ("I recommend users to…" yields `recommendations` in the traced example).
-- The 18 unresolved quarantines are counted as incomplete, not as classified. 122 records were labeled by the fallback
-  model, and 1,439 retry requests fixed single-line validation failures.
+- 122 records were labeled by the fallback model, 18 by the repair pass, and 1,646 needed an invalid-output retry. Code
+  forced severity to 1 for 501 praise/request/unclear records where the model gave a higher severity (`rule_fix` flag,
+  `needs_review=true`).
+- `app_version` is missing for 159,701 rows. It is kept as metadata and not used for classification or ranking, so no
+  per-version claims are made.
 - Message Batches cache hits are best-effort, and batch turnaround is provider-controlled (observed 4–11 min per
   1,000-request batch). The realtime throughput estimates in the calculator are modeled, linear in workers.
 - Development checkpoints used a 4,096-token output cap. The full run used 2,500 (the max observed was 1,384). This is
