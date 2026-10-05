@@ -1,0 +1,18 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+# raw 97.4 MB source CSV is not committed; see README for link + checksum
+data/spotify_reviews_18months.csv
+# working state databases (large); exported artifacts are committed instead
+runs/**/state.db
+runs/**/state.db-*
+local-reference.json
+self-check.json
+# duplicates of files already in grading/ (keeps the repo small)
+runs/full/outputs/records.jsonl.gz
+runs/full/outputs/membership.csv
+runs/full/checkpoints/

@@ -1,0 +1,43 @@
+{
+  "calls_this_invocation": [
+    {
+      "attempts": 10955,
+      "cache_read_tokens": 55878454,
+      "cache_write_tokens": 1377296,
+      "cost_usd": 41.433746,
+      "input_tokens": 74031428,
+      "outcome": "succeeded",
+      "output_tokens": 11371867,
+      "role": "enrich"
+    }
+  ],
+  "cost_basis": "computed from provider-reported usage x config.PRICES (standard or batch tier)",
+  "coverage": {
+    "cache_reuse_records": 176420,
+    "completed": 660591,
+    "empty_text_quarantined": 13,
+    "other_unresolved": 18,
+    "quarantined": 31,
+    "source_rows": 660622
+  },
+  "enrich": {
+    "checkpoint": "runs/full/checkpoints/after_enrich_20261004T163138.json",
+    "chunks_submitted": 10,
+    "phase": "resume",
+    "spent_usd": 41.43374605000007,
+    "stop_reason": "completed"
+  },
+  "partial": false,
+  "record_statuses": {
+    "completed": 660591,
+    "quarantined": 31
+  },
+  "run_id": "20261004T163138",
+  "spend_all_invocations_usd": 43.663587,
+  "spend_this_invocation_usd": 41.433746,
+  "stage_seconds": {
+    "enrich": 3256.091,
+    "prepare": 0.939
+  },
+  "wall_clock_s": 3270.227
+}

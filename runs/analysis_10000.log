@@ -1,0 +1,34 @@
+[prepare] 10000 rows, 0 empty, 8448 distinct nonempty texts
+[enrich] phase=initial pending_rows=10000 cache_hits=0 distinct_to_send=8448 requests_this_run=169 workers=4 budget=$6.00
+[enrich] 10/169 requests saved | distinct ok=500 quarantined=0 | spent $0.0777 | 24s
+[enrich] 20/169 requests saved | distinct ok=1000 quarantined=0 | spent $0.1597 | 49s
+[enrich] 30/169 requests saved | distinct ok=1500 quarantined=0 | spent $0.2392 | 70s
+[enrich] 40/169 requests saved | distinct ok=2000 quarantined=0 | spent $0.3403 | 95s
+[enrich] 50/169 requests saved | distinct ok=2500 quarantined=0 | spent $0.4214 | 116s
+[enrich] 60/169 requests saved | distinct ok=3000 quarantined=0 | spent $0.5154 | 145s
+[enrich] 70/169 requests saved | distinct ok=3500 quarantined=0 | spent $0.5890 | 166s
+[enrich] 80/169 requests saved | distinct ok=4000 quarantined=0 | spent $0.6687 | 192s
+[enrich] 90/169 requests saved | distinct ok=4500 quarantined=0 | spent $0.7493 | 212s
+[enrich] 100/169 requests saved | distinct ok=5000 quarantined=0 | spent $0.8312 | 236s
+[enrich] 110/169 requests saved | distinct ok=5500 quarantined=0 | spent $0.9155 | 260s
+[enrich] 120/169 requests saved | distinct ok=6000 quarantined=0 | spent $0.9957 | 282s
+[enrich] 130/169 requests saved | distinct ok=6500 quarantined=0 | spent $1.0766 | 305s
+[enrich] 140/169 requests saved | distinct ok=7000 quarantined=0 | spent $1.1618 | 331s
+[enrich] 150/169 requests saved | distinct ok=7500 quarantined=0 | spent $1.2404 | 354s
+[enrich] 160/169 requests saved | distinct ok=8000 quarantined=0 | spent $1.3253 | 376s
+[enrich] 169/169 requests saved | distinct ok=8448 quarantined=0 | spent $1.4019 | 400s
+[enrich] stop_reason=completed; checkpoint saved to runs/analysis_10000/checkpoints/after_enrich_20261004T160543.json
+[verify] declared sample=200 (seed a5-verify-v1), already verified=0
+[verify] agreement {'topic': 0.865, 'intent': 0.9, 'severity': 0.865, 'all3': 0.73}, severity MAE 0.145, planted errors caught 39/40
+[group] 42 issues, 4469 memberships, named 42/42 by model
+[rank] 42 issues ranked -> runs/analysis_10000/outputs/ranking.csv
+[memo] check passed=True problems=[]
+{
+ "run_id": "20261004T160543",
+ "partial": false,
+ "wall_clock_s": 448.392,
+ "record_statuses": {
+  "completed": 10000
+ },
+ "spend_this_invocation_usd": 1.49712
+}

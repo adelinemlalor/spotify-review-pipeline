@@ -1,0 +1,390 @@
+{
+  "evidence_pack_sha256": "b48e691a1e6a52c05f8c010f3f0ef4b85277f63acae8bc19aa572b938f93a133",
+  "issues": {
+    "ISS-access-account_hacked_or_locked": {
+      "coherence": "high",
+      "example_review_ids": [
+        "d87536c5-6fe0-4b38-b0b1-c47936e4a0d8"
+      ],
+      "members": 1,
+      "name": "Account hacked, playlists inaccessible",
+      "note": "Customer reports account compromise and lost playlist access."
+    },
+    "ISS-access-general": {
+      "coherence": "mixed",
+      "example_review_ids": [
+        "1f13c3a2-e57b-460c-b569-964e6b2b1f31"
+      ],
+      "members": 1,
+      "name": "App broken, offline and login issues",
+      "note": "Combines offline listening failure with login problems; unclear if related."
+    },
+    "ISS-access-logged_out": {
+      "coherence": "high",
+      "example_review_ids": [
+        "f6f9c680-0970-443f-b422-b1a6ad85e7ce"
+      ],
+      "members": 1,
+      "name": "Premium account logged out automatically",
+      "note": "Customer's account unexpectedly logged out without action."
+    },
+    "ISS-access-login_failure": {
+      "coherence": "high",
+      "example_review_ids": [
+        "9ce5f16c-aef0-48eb-ace1-91905796bc3d",
+        "686fa8a8-f220-4ddd-b283-d61dd242051a",
+        "12efd15d-4d4f-4a71-8e71-69d03b6f983a",
+        "32fb340f-4f9f-4551-8dae-755221e58d6a",
+        "de0a9cdf-8974-48bc-802f-331228df4619",
+        "84acb6b0-dd91-4330-944f-2686cbd15ce0",
+        "0a7f2420-1b49-41fa-8cfc-0b2e178bea6b"
+      ],
+      "members": 7,
+      "name": "Cannot log in to app",
+      "note": "Multiple login failures with various error messages and conditions."
+    },
+    "ISS-billing-premium_restrictions_free_tier": {
+      "coherence": "high",
+      "example_review_ids": [
+        "86adc9b6-be58-400c-9a08-aa082ff0535c",
+        "237e6174-4921-44df-828c-28f7b9d6196e",
+        "f9cf3b4a-c40e-4578-9f6f-358807450b0f",
+        "89ea2c30-db8b-459d-8ab7-bbcb7f92c774",
+        "d146397f-4a94-4980-be00-ae9212eca3a7",
+        "4a2ba740-231c-406e-a7a1-c31349e99c44",
+        "384008ad-eb79-4525-a794-b0b67f7fb3f5",
+        "4f6a50a1-9440-468c-b35f-961bca94fd88",
+        "a78d831a-69f4-428a-9235-cfdd9775c509",
+        "88439ec2-7c49-4c57-bedb-c5e098692aff",
+        "7084ced1-0428-4093-9328-442f74719b4f",
+        "c13dcedc-50da-48a8-a90d-cfb037a66478"
+      ],
+      "members": 43,
+      "name": "Free tier features restricted, premium forced",
+      "note": "Recent updates limit free user song selection, skips, and features."
+    },
+    "ISS-billing-price": {
+      "coherence": "high",
+      "example_review_ids": [
+        "67835dbd-10ac-4325-b93e-453d1bd5ec36",
+        "58511d69-67c2-4432-84d8-f3c556592f2b",
+        "a8170750-1671-4962-bba3-bd297d78f0bc",
+        "08c07310-e802-4a88-bd97-2a5f240c0b44"
+      ],
+      "members": 4,
+      "name": "Subscription costs too high",
+      "note": "Customers object to pricing for music quality and basic features."
+    },
+    "ISS-billing-subscription_or_payment_problem": {
+      "coherence": "high",
+      "example_review_ids": [
+        "1d1480fb-0142-46da-8570-45bf3983bf6d",
+        "16929558-ce1e-4b87-8738-a1de3f557f66",
+        "57aca404-d58b-4bb4-97b1-c64db92f054a"
+      ],
+      "members": 3,
+      "name": "Cannot complete premium signup or payment",
+      "note": "Payment process fails or subscription remains paused after payment."
+    },
+    "ISS-catalog-general": {
+      "coherence": "high",
+      "example_review_ids": [
+        "d27e9b26-a7af-469c-9a4e-8deea2db72ae"
+      ],
+      "members": 1,
+      "name": "Platform hosts objectionable podcast content",
+      "note": "Complaint about non-music content creators on platform."
+    },
+    "ISS-catalog-lyrics": {
+      "coherence": "mixed",
+      "example_review_ids": [
+        "9f7a013a-082e-4ec1-8a65-a1e0a0395d20",
+        "e5e362d7-1057-43bf-a3ca-8ffd93f80789",
+        "59f31721-b2c8-40c5-ba3c-b9fe64a58d68",
+        "e0127547-4edd-44a0-8d5e-e8398bc07086",
+        "d218ffde-42f9-48f8-a793-832507454b35",
+        "47becad0-8ae5-4a10-9731-fde8f2091862"
+      ],
+      "members": 6,
+      "name": "Song lyrics fail to load or display",
+      "note": "Lyrics loading failures and font quality issues combined."
+    },
+    "ISS-catalog-missing_or_removed_content": {
+      "coherence": "high",
+      "example_review_ids": [
+        "a1a28752-3256-4f81-b888-3e943343529f",
+        "4d327494-7846-481a-bf00-f4b5abc099c4",
+        "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+        "3df77a78-ad9a-4456-8be8-8178ffd43d67",
+        "4b3ace8e-b199-40b3-8ad4-5c0580e38203"
+      ],
+      "members": 5,
+      "name": "Songs missing or removed from catalog",
+      "note": "Users cannot find favorite songs; content unavailable or deleted."
+    },
+    "ISS-catalog-recommendations_and_discovery": {
+      "coherence": "mixed",
+      "example_review_ids": [
+        "7c5d9a4d-1bb1-4da3-bc3b-2500ae0246f1",
+        "1807cc68-ba99-4edc-b6f1-2a1478e69109",
+        "544a8481-e12b-4878-92d0-ec3a5256e13a",
+        "ed8efdfe-43e3-4baa-bbed-317807663531"
+      ],
+      "members": 4,
+      "name": "Recommendation quality and relevance issues",
+      "note": "Some praise improvements, others criticize repetition, unwanted suggestions, or ignored settings."
+    },
+    "ISS-downloads-download_failure": {
+      "coherence": "high",
+      "example_review_ids": [
+        "394b1e3e-205a-48a7-a9ca-64170fa5f6a0"
+      ],
+      "members": 1,
+      "name": "Download not working",
+      "note": "Customer unable to download content."
+    },
+    "ISS-downloads-downloads_lost": {
+      "coherence": "high",
+      "example_review_ids": [
+        "5be3399d-dcd2-405b-a931-29b02ffc966e"
+      ],
+      "members": 1,
+      "name": "Downloaded content disappeared",
+      "note": "Customer's downloaded files were deleted or lost."
+    },
+    "ISS-downloads-offline_mode": {
+      "coherence": "high",
+      "example_review_ids": [
+        "dcff57c6-abd6-413b-b255-aec3dc34fcbd",
+        "b03d6dc9-449a-4647-b112-559186656759"
+      ],
+      "members": 2,
+      "name": "Offline mode not functioning",
+      "note": "Offline feature broken; storage move caused data loss."
+    },
+    "ISS-other-general_criticism": {
+      "coherence": "high",
+      "example_review_ids": [
+        "f5cc511f-ae71-4985-a737-1c0075156e2b",
+        "1ee942bb-a3de-4380-8c08-a15949687c6c",
+        "c1ab120a-f91f-4ee3-87f5-66f352e2d47f",
+        "0d9c62d1-2b53-4887-8156-a28eeac86e82",
+        "f7cc1aa7-c306-4f5b-a5e9-911cca07fa60",
+        "a0036cd0-72ae-4d2d-98a1-c12938dd166c",
+        "19effee5-bf96-4313-8cf9-1ac996c1c4f1",
+        "1db044db-d184-4335-877c-d8fc364b282e",
+        "8216dafb-b5e2-47e2-b342-9f73c203b56e",
+        "06a45bd5-3ed9-43af-b7f2-8b9487e2ffff",
+        "39e472ad-2038-4978-a559-d052e3844e59",
+        "83e0e3fb-c641-483d-8b6a-16dff7c2ab24"
+      ],
+      "members": 53,
+      "name": "App quality degradation complaints",
+      "note": "Vague negative reviews about app performance or recent updates."
+    },
+    "ISS-other-politics_or_boycott": {
+      "coherence": "high",
+      "example_review_ids": [
+        "9666e9fe-0bc2-4e4c-8842-2162be0b6610",
+        "b0d0660d-b859-4d87-97e8-7420f05d1f94",
+        "9f3626e0-1bcb-4788-a412-f812102502d1",
+        "7fd63051-28ec-4e51-a06e-97f7010eae40",
+        "33526c6f-7a49-4b3d-bd20-d1bc191c494c",
+        "486d1d7a-d6f6-41ea-81ad-ed875452729c"
+      ],
+      "members": 6,
+      "name": "Boycott or political objection",
+      "note": "Uninstalls motivated by political, religious, or ethical concerns."
+    },
+    "ISS-playback-audio_quality_or_volume": {
+      "coherence": "high",
+      "example_review_ids": [
+        "d767f1af-e8eb-41af-9cc4-8bfa35253870"
+      ],
+      "members": 1,
+      "name": "Audio quality complaint",
+      "note": "Customer reports poor sound quality."
+    },
+    "ISS-playback-connection_or_loading": {
+      "coherence": "high",
+      "example_review_ids": [
+        "01124066-b5dd-4c79-8618-d1bea99d197a",
+        "f87fb3d9-501a-4119-bc40-b0669270ae44",
+        "c64af4d8-ac17-48fe-ae38-fd54b41b16b1",
+        "98d936e1-fd1d-475a-89ee-0e1517cb60d3",
+        "4ab2089a-ffa8-49e7-a8a3-aeb583a96796",
+        "bcdf315e-c82d-41f0-9fcd-ba5933dfe77e"
+      ],
+      "members": 6,
+      "name": "Connection or loading failures",
+      "note": "App reports no internet despite connectivity; slow loading; works on one connection type only."
+    },
+    "ISS-playback-crashes_or_wont_open": {
+      "coherence": "high",
+      "example_review_ids": [
+        "66a29b3c-c14d-440e-b722-b23e0c99ae82",
+        "55cc3abf-c295-4591-8c3a-78085cfdefaa",
+        "065c418e-7f18-42a3-b241-fe693b7a2b0c",
+        "4a806587-0dde-4fb4-b4f1-f5c7d197c927",
+        "0fcf89b2-0b81-4838-bf5f-41c684e43b2d",
+        "06d4c78d-73b4-4b54-9ef3-3d5a0d18cb96",
+        "89be32ab-664a-4647-a5e3-e4006a67e4e1",
+        "45c561b9-cc47-4d80-95d3-f0d20bc84af3"
+      ],
+      "members": 8,
+      "name": "App crashes or fails to open",
+      "note": "App crashes, freezes on loading screen, or won't play after recent update."
+    },
+    "ISS-playback-device_bluetooth_car_cast": {
+      "coherence": "mixed",
+      "example_review_ids": [
+        "4526d439-a6e4-4e0a-b0bc-ae0f9ce5bd96",
+        "8b9d84a8-f650-4272-b332-4d60cb42377d"
+      ],
+      "members": 2,
+      "name": "Device connection issues",
+      "note": "Difficulty connecting to alarms, gaming consoles, or PCs; Bluetooth pairing problems."
+    },
+    "ISS-playback-general": {
+      "coherence": "high",
+      "example_review_ids": [
+        "4c34f240-76d4-451a-ac74-5bc6bd484825",
+        "c7df9cb8-7bec-4036-a6a1-1353d2d705d8",
+        "a598cfe0-473b-4665-9eb2-4eebb3c1d877",
+        "d3b74f36-aa48-42af-ae4a-d4a8b0499a60",
+        "2ffdf599-a0d5-4c01-bf26-025215d44c06",
+        "46ff0c74-5e86-4e5b-b4cd-36201aab0f9e",
+        "9c9757da-6b99-4c95-a0e7-0661ee858027",
+        "a7b7539a-c8d3-4f4e-9edd-d46cd1b1fd12",
+        "a06df5ff-01c8-4aff-a89c-a0c2ddc88f76",
+        "05fa5b8a-a49b-43be-bab5-38af789a65a7",
+        "651e6e7b-f93e-4369-9631-15c73ddcd4ad",
+        "509915ba-cf86-4baa-9bea-a73af229ca48"
+      ],
+      "members": 14,
+      "name": "App won't play music or gets stuck",
+      "note": "Customers report inability to play songs, app freezing, spinning loading icon, background download issues."
+    },
+    "ISS-playback-performance_battery_storage": {
+      "coherence": "high",
+      "example_review_ids": [
+        "a862b037-7542-4a3e-94ef-836b7092f4ef"
+      ],
+      "members": 1,
+      "name": "Excessive data and storage usage",
+      "note": "Single example about phone storage and data waste."
+    },
+    "ISS-playback-skips_or_wrong_song": {
+      "coherence": "high",
+      "example_review_ids": [
+        "a0cbc9d6-51bb-46f0-9ba9-ad4f4593c266",
+        "145ea602-b8fb-41c1-bfdd-79293a18681f",
+        "0e5a2a0d-7f67-48a5-9edd-27064f670656",
+        "0853c56b-0fa1-4d12-9cb9-6817d52233f5",
+        "77a53aa5-a453-4bcb-8267-d4f44a492dd3"
+      ],
+      "members": 5,
+      "name": "App plays wrong song when selected",
+      "note": "Customers report clicking one song but different song plays instead."
+    },
+    "ISS-playback-stops_or_pauses": {
+      "coherence": "high",
+      "example_review_ids": [
+        "6c257eba-3dca-49f6-b7f0-4c4484d81e26",
+        "1cdc5bb2-8e8d-4267-8853-6c1dd4c7ef13",
+        "039112fc-bbed-4540-83cc-890fcb129751",
+        "179d79f7-d052-490f-a9d6-f97525b32642",
+        "f1abd13b-2391-4b04-8109-efa7f3cfed0b"
+      ],
+      "members": 5,
+      "name": "Music stops or pauses randomly",
+      "note": "Customers report playback stopping mid-song at unpredictable intervals."
+    },
+    "ISS-usability-ads": {
+      "coherence": "high",
+      "example_review_ids": [
+        "85383985-844d-4f9b-bcd9-d6016ac35f6b",
+        "aa86aa43-19d5-40b4-8b03-535a96346e18",
+        "035213ba-b1b9-411c-b028-70296e5f0e73",
+        "6eb64519-37d4-4591-a47a-bbb96357de36",
+        "b9ae23d2-1152-4bfe-a876-afc09c005377",
+        "92c43612-30bb-4514-bd51-cb7419c7e4d2",
+        "50626053-301c-42fa-91aa-2f88aef82e64",
+        "4d7c1b3b-b7f8-417e-a984-6ae27c3acef5",
+        "10775595-01b9-4623-9163-51619e2a0fa9",
+        "c2738a4f-e57c-46bc-a4ad-8ec5a4b5d5cd",
+        "5e42046c-b29b-4035-ba83-a8e222789e98",
+        "a3c6d913-4b67-4025-b34e-3760e5f7795f"
+      ],
+      "members": 33,
+      "name": "Excessive ads in free version",
+      "note": "Customers report too many, long, unskippable ads appearing frequently."
+    },
+    "ISS-usability-navigation_and_controls": {
+      "coherence": "mixed",
+      "example_review_ids": [
+        "9e5f9745-f8be-48d3-b9de-4d118507d94a",
+        "618d1dbb-0186-4537-923a-7b4dabf19afb",
+        "d455c11e-c530-4c03-a395-38f5a5cdb8d3",
+        "e8f2fb9b-ad3b-4fec-8194-ab67956ee50a",
+        "8cd35162-9223-42d1-8097-06e22fde94ea",
+        "c1726764-f0ce-4abc-ad9e-6cd143e1b2c7"
+      ],
+      "members": 6,
+      "name": "Navigation and control issues",
+      "note": "Includes seek-back feature removal, unwanted recommendations, permission auto-start, Spotify Wrap access, and UX concerns."
+    },
+    "ISS-usability-notifications_and_widgets": {
+      "coherence": "mixed",
+      "example_review_ids": [
+        "caa9bb7e-814c-4895-b872-10637419b9ba"
+      ],
+      "members": 1,
+      "name": "Email spam and podcast format switching",
+      "note": "Excessive emails and inability to switch podcast audio/video modes."
+    },
+    "ISS-usability-playlist_and_library_management": {
+      "coherence": "high",
+      "example_review_ids": [
+        "991dc66a-aba8-4844-be48-816539680877"
+      ],
+      "members": 1,
+      "name": "Liked songs list not displaying",
+      "note": "Single example about liked songs list viewing problem."
+    },
+    "ISS-usability-shuffle_and_queue": {
+      "coherence": "high",
+      "example_review_ids": [
+        "e393cec1-67e8-4f58-a484-8d9d76dc8fd6",
+        "5c9c17d3-9d6a-4fa1-a2a4-ae98eefbbd25",
+        "232c669e-8bfe-4642-b0c9-229c2911cc6c",
+        "f8a85378-c4dd-40e2-b548-beebcdf3b991",
+        "d108ae38-c395-4789-9b6b-661d1efb60d7",
+        "aa8fec15-2de4-46af-a911-1b49bcb4eb4c",
+        "7f27bbab-ef19-4fb1-80d8-cd014da3e002"
+      ],
+      "members": 7,
+      "name": "Shuffle repeats same songs or malfunctions",
+      "note": "Customers report shuffle playing limited songs repeatedly or new Smart Shuffle feature being annoying."
+    },
+    "ISS-usability-ui_redesign": {
+      "coherence": "high",
+      "example_review_ids": [
+        "c0f03952-e067-4f25-99fc-18a1a045ed9f",
+        "3feb5ba7-4a0d-47e0-a803-eb2dce85dd5e",
+        "0070e713-4cb7-4d78-954f-1764d5593c91",
+        "0e71515c-ecf1-4b23-b783-00f58e51d96a",
+        "94c9f2f9-36fa-4c11-936e-660514fe7a35",
+        "adc4c3e4-3717-4888-ad86-c9381c224d2f",
+        "2e2480c1-7799-4a66-be67-a947a2d99680",
+        "2aae0ce4-ae4a-46ce-b2fe-0d901eb23c06",
+        "dd89d3d3-e4c1-446e-b899-fc038cfbcf95"
+      ],
+      "members": 9,
+      "name": "New home screen and layout changes",
+      "note": "Customers dislike recent UI redesign, home page layout, icon changes, and difficulty finding features."
+    }
+  },
+  "model": "claude-haiku-4-5",
+  "prompt_version": "group-v1"
+}

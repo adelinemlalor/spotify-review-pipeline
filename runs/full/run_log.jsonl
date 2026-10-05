@@ -1,0 +1,9 @@
+{"run_id": "20261004T162102", "stage": "prepare", "at": "2026-10-04T23:21:12.179+00:00", "seconds": 9.609, "records": 660622, "distinct": 484189}
+{"run_id": "20261004T162102", "stage": "enrich", "at": "2026-10-04T23:31:28.970+00:00", "seconds": 616.81, "phase": "initial", "cache_hits": 0, "requests": 274, "distinct_completed": 13700, "distinct_quarantined": 0, "spent_usd": 2.229840799999998, "stop_reason": "interrupted_by_user", "fallback_used": 1, "fallback_cap": 2420, "checkpoint": "runs/full/checkpoints/after_enrich_20261004T162102.json"}
+{"run_id": "20261004T163138", "stage": "prepare", "at": "2026-10-04T23:31:39.771+00:00", "seconds": 0.939, "records": 660622, "distinct": 484189}
+{"run_id": "20261004T163138", "stage": "enrich", "at": "2026-10-05T00:25:55.893+00:00", "seconds": 3256.091, "phase": "resume", "checkpoint": "runs/full/checkpoints/after_enrich_20261004T163138.json", "chunks_submitted": 10, "stop_reason": "completed", "spent_usd": 41.43374605000007}
+{"run_id": "20261004T172710", "stage": "prepare", "at": "2026-10-05T00:27:10.347+00:00", "seconds": 0.057, "records": 660622, "distinct": 484189}
+{"run_id": "20261004T172710", "stage": "verify", "at": "2026-10-05T00:28:39.870+00:00", "seconds": 77.093, "compared": 1000, "agreement": {"topic": 0.835, "intent": 0.925, "severity": 0.855, "all3": 0.69}}
+{"run_id": "20261004T172710", "stage": "group", "at": "2026-10-05T00:29:03.406+00:00", "seconds": 23.536, "issues": 44}
+{"run_id": "20261004T172710", "stage": "rank", "at": "2026-10-05T00:29:05.220+00:00", "seconds": 1.813, "issues": 44}
+{"run_id": "20261004T172710", "stage": "memo", "at": "2026-10-05T00:29:17.271+00:00", "seconds": 12.051, "check_passed": true}

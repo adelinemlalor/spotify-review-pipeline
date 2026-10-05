@@ -1,0 +1,9 @@
+topic,complaint_or_cancellation_records,severity_sum,mean_severity,cancellation_records,severity_4plus_records,share_of_all_complaints,all_completed_records_in_topic
+access,133,504,3.789474,3,102,0.029761,137
+usability,1091,2553,2.340055,79,4,0.244126,1252
+playback,735,2363,3.214966,42,196,0.164466,781
+downloads,78,263,3.371795,4,31,0.017454,107
+catalog,241,654,2.713693,10,3,0.053927,501
+billing,923,2633,2.852654,157,43,0.206534,988
+support,12,39,3.250000,1,4,0.002685,24
+other,1256,2512,2.000000,81,0,0.281047,6210

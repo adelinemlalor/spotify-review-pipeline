@@ -1,0 +1,34 @@
+{
+  "calls_this_invocation": [],
+  "cost_basis": "computed from provider-reported usage x config.PRICES (standard or batch tier)",
+  "coverage": {
+    "cache_reuse_records": 0,
+    "completed": 100,
+    "empty_text_quarantined": 0,
+    "other_unresolved": 0,
+    "quarantined": 0,
+    "source_rows": 100
+  },
+  "enrich": {
+    "cache_hits": 0,
+    "phase": "resume",
+    "requests": 0,
+    "stop_reason": "nothing_pending"
+  },
+  "partial": false,
+  "record_statuses": {
+    "completed": 100
+  },
+  "run_id": "20261004T160403",
+  "spend_all_invocations_usd": 0.064023,
+  "spend_this_invocation_usd": 0.0,
+  "stage_seconds": {
+    "enrich": 0.0,
+    "group": 0.001,
+    "memo": 0.001,
+    "prepare": 0.001,
+    "rank": 0.001,
+    "verify": 0.001
+  },
+  "wall_clock_s": 0.008
+}

@@ -1,0 +1,35 @@
+[prepare] 500 rows, 0 empty, 479 distinct nonempty texts
+[batch] phase=initial cache_hits=0 pending distinct=479 requests=10 chunks this run=3 (chunk size 4) budget=$1.00
+[batch] submitted msgbatch_01VVN7zc2FTgieeBMwXPWR1n: 4 requests, reserved worst-case $0.08 (spent $0.00, reserved $0.08)
+[batch] submitted msgbatch_01RBam8ghSRwk78Gp833zSvq: 4 requests, reserved worst-case $0.08 (spent $0.00, reserved $0.16)
+[batch] submitted msgbatch_01HZonauW9U91TMRTT5acGLn: 2 requests, reserved worst-case $0.04 (spent $0.00, reserved $0.20)
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] 3 in flight; processing=10 succeeded=0 errored=0
+[batch] ingested 4 results from msgbatch_01VVN7zc2FTgieeBMwXPWR1n
+[batch] msgbatch_01VVN7zc2FTgieeBMwXPWR1n settled: actual batch cost $0.0155; run spend $0.0163
+[batch] ingested 4 results from msgbatch_01RBam8ghSRwk78Gp833zSvq
+[batch] msgbatch_01RBam8ghSRwk78Gp833zSvq settled: actual batch cost $0.0184; run spend $0.0347
+[batch] ingested 2 results from msgbatch_01HZonauW9U91TMRTT5acGLn
+[batch] msgbatch_01HZonauW9U91TMRTT5acGLn settled: actual batch cost $0.0094; run spend $0.0441
+[batch] stop_reason=completed; checkpoint runs/batch_api_test_500/checkpoints/after_enrich_20261004T160653.json
+{
+ "run_id": "20261004T160653",
+ "partial": false,
+ "wall_clock_s": 448.074,
+ "record_statuses": {
+  "completed": 500
+ },
+ "spend_this_invocation_usd": 0.044088
+}

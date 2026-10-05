@@ -1,0 +1,11 @@
+{
+  "complaint_or_cancellation_records": 291185,
+  "completed_records": 660591,
+  "intent_counts": {
+    "cancellation": 25321,
+    "complaint": 265864,
+    "praise": 293265,
+    "request": 18065,
+    "unclear": 58076
+  }
+}

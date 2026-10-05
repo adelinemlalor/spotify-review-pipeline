@@ -1,0 +1,34 @@
+{
+  "distinct_nonempty_texts": 7,
+  "duplicate_review_ids": 0,
+  "empty_review_text": 1,
+  "empty_review_text_ids": [
+    "SYNTH-ODD-006"
+  ],
+  "exact_duplicate_text_rows_reusable": 0,
+  "file_bytes": 1034,
+  "file_sha256": "dd3fd922096d159045e8ebfdd46f04b04bd127efe608a2b68ecf7ef439923277",
+  "first_review": "2023-01-01 00:00:00",
+  "input_path": "/Users/adelinelalor/Documents/Courses/Fundamentals of Agentic AI/Assignment 5/evals/synthetic_cases.csv",
+  "invalid_rating_values": 0,
+  "last_review": "2023-01-01 00:00:00",
+  "matches_course_full_file": false,
+  "missing_app_version": 8,
+  "nonempty_to_classify": 7,
+  "note": "Missing app_version does not block classification; star rating is metadata only.",
+  "parser": "python csv.DictReader(strict=True), utf-8-sig, newline='' (multiline-safe)",
+  "quarantine_rule": "empty/whitespace-only review_text -> status quarantined, reason empty_review_text",
+  "records": 8,
+  "reviews_by_month": {
+    "2023-01": 8
+  },
+  "reviews_by_rating": {
+    "1": 3,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 2
+  },
+  "texts_repeated_more_than_once": 0,
+  "top_repeated_texts": []
+}

@@ -1,0 +1,15 @@
+{
+  "completed_count": 7,
+  "completed_ids": [
+    "SYNTH-INJ-001",
+    "SYNTH-INJ-002",
+    "SYNTH-INJ-003",
+    "SYNTH-INJ-004",
+    "SYNTH-ODD-005",
+    "SYNTH-ODD-007",
+    "SYNTH-ODD-008"
+  ],
+  "label": "after_enrich",
+  "run_id": "systest",
+  "taken_at": "2026-10-04T23:05:52.633+00:00"
+}

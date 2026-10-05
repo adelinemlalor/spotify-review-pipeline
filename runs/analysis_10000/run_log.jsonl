@@ -1,0 +1,6 @@
+{"run_id": "20261004T160543", "stage": "prepare", "at": "2026-10-04T23:05:43.199+00:00", "seconds": 0.092, "records": 10000, "distinct": 8448}
+{"run_id": "20261004T160543", "stage": "enrich", "at": "2026-10-04T23:12:24.200+00:00", "seconds": 401.001, "phase": "initial", "cache_hits": 0, "requests": 169, "distinct_completed": 8448, "distinct_quarantined": 0, "spent_usd": 1.4018927999999995, "stop_reason": "completed", "fallback_used": 3, "fallback_cap": 42, "checkpoint": "runs/analysis_10000/checkpoints/after_enrich_20261004T160543.json"}
+{"run_id": "20261004T160543", "stage": "verify", "at": "2026-10-04T23:12:39.162+00:00", "seconds": 14.74, "compared": 200, "agreement": {"topic": 0.865, "intent": 0.9, "severity": 0.865, "all3": 0.73}}
+{"run_id": "20261004T160543", "stage": "group", "at": "2026-10-04T23:12:59.348+00:00", "seconds": 20.187, "issues": 42}
+{"run_id": "20261004T160543", "stage": "rank", "at": "2026-10-04T23:12:59.387+00:00", "seconds": 0.038, "issues": 42}
+{"run_id": "20261004T160543", "stage": "memo", "at": "2026-10-04T23:13:11.497+00:00", "seconds": 12.11, "check_passed": true}

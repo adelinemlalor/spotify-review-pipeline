@@ -1,0 +1,910 @@
+{
+  "claims": [
+    {
+      "claim_id": "C001",
+      "issue_id": "ISS-billing-premium_restrictions_free_tier",
+      "metric": "complaint_count",
+      "value": "43"
+    },
+    {
+      "claim_id": "C002",
+      "issue_id": "ISS-billing-premium_restrictions_free_tier",
+      "metric": "severity_sum",
+      "value": "124"
+    },
+    {
+      "claim_id": "C003",
+      "issue_id": "ISS-billing-premium_restrictions_free_tier",
+      "metric": "mean_severity",
+      "value": "2.883721"
+    },
+    {
+      "claim_id": "C004",
+      "issue_id": "ISS-billing-premium_restrictions_free_tier",
+      "metric": "priority_score",
+      "value": "124"
+    },
+    {
+      "claim_id": "C005",
+      "issue_id": "ISS-other-general_criticism",
+      "metric": "complaint_count",
+      "value": "53"
+    },
+    {
+      "claim_id": "C006",
+      "issue_id": "ISS-other-general_criticism",
+      "metric": "severity_sum",
+      "value": "106"
+    },
+    {
+      "claim_id": "C007",
+      "issue_id": "ISS-other-general_criticism",
+      "metric": "mean_severity",
+      "value": "2.000000"
+    },
+    {
+      "claim_id": "C008",
+      "issue_id": "ISS-other-general_criticism",
+      "metric": "priority_score",
+      "value": "106"
+    },
+    {
+      "claim_id": "C009",
+      "issue_id": "ISS-usability-ads",
+      "metric": "complaint_count",
+      "value": "33"
+    },
+    {
+      "claim_id": "C010",
+      "issue_id": "ISS-usability-ads",
+      "metric": "severity_sum",
+      "value": "70"
+    },
+    {
+      "claim_id": "C011",
+      "issue_id": "ISS-usability-ads",
+      "metric": "mean_severity",
+      "value": "2.121212"
+    },
+    {
+      "claim_id": "C012",
+      "issue_id": "ISS-usability-ads",
+      "metric": "priority_score",
+      "value": "70"
+    },
+    {
+      "claim_id": "C013",
+      "issue_id": "ISS-playback-general",
+      "metric": "complaint_count",
+      "value": "14"
+    },
+    {
+      "claim_id": "C014",
+      "issue_id": "ISS-playback-general",
+      "metric": "severity_sum",
+      "value": "45"
+    },
+    {
+      "claim_id": "C015",
+      "issue_id": "ISS-playback-general",
+      "metric": "mean_severity",
+      "value": "3.214286"
+    },
+    {
+      "claim_id": "C016",
+      "issue_id": "ISS-playback-general",
+      "metric": "priority_score",
+      "value": "45"
+    },
+    {
+      "claim_id": "C017",
+      "issue_id": "ISS-playback-crashes_or_wont_open",
+      "metric": "complaint_count",
+      "value": "8"
+    },
+    {
+      "claim_id": "C018",
+      "issue_id": "ISS-playback-crashes_or_wont_open",
+      "metric": "severity_sum",
+      "value": "32"
+    },
+    {
+      "claim_id": "C019",
+      "issue_id": "ISS-playback-crashes_or_wont_open",
+      "metric": "mean_severity",
+      "value": "4.000000"
+    },
+    {
+      "claim_id": "C020",
+      "issue_id": "ISS-playback-crashes_or_wont_open",
+      "metric": "priority_score",
+      "value": "32"
+    },
+    {
+      "claim_id": "C021",
+      "issue_id": "ISS-access-login_failure",
+      "metric": "complaint_count",
+      "value": "7"
+    },
+    {
+      "claim_id": "C022",
+      "issue_id": "ISS-access-login_failure",
+      "metric": "severity_sum",
+      "value": "27"
+    },
+    {
+      "claim_id": "C023",
+      "issue_id": "ISS-access-login_failure",
+      "metric": "mean_severity",
+      "value": "3.857143"
+    },
+    {
+      "claim_id": "C024",
+      "issue_id": "ISS-access-login_failure",
+      "metric": "priority_score",
+      "value": "27"
+    },
+    {
+      "claim_id": "C025",
+      "issue_id": "ISS-usability-ui_redesign",
+      "metric": "complaint_count",
+      "value": "9"
+    },
+    {
+      "claim_id": "C026",
+      "issue_id": "ISS-usability-ui_redesign",
+      "metric": "severity_sum",
+      "value": "21"
+    },
+    {
+      "claim_id": "C027",
+      "issue_id": "ISS-usability-ui_redesign",
+      "metric": "mean_severity",
+      "value": "2.333333"
+    },
+    {
+      "claim_id": "C028",
+      "issue_id": "ISS-usability-ui_redesign",
+      "metric": "priority_score",
+      "value": "21"
+    },
+    {
+      "claim_id": "C029",
+      "issue_id": "ISS-playback-connection_or_loading",
+      "metric": "complaint_count",
+      "value": "6"
+    },
+    {
+      "claim_id": "C030",
+      "issue_id": "ISS-playback-connection_or_loading",
+      "metric": "severity_sum",
+      "value": "20"
+    },
+    {
+      "claim_id": "C031",
+      "issue_id": "ISS-playback-connection_or_loading",
+      "metric": "mean_severity",
+      "value": "3.333333"
+    },
+    {
+      "claim_id": "C032",
+      "issue_id": "ISS-playback-connection_or_loading",
+      "metric": "priority_score",
+      "value": "20"
+    },
+    {
+      "claim_id": "C033",
+      "issue_id": "ISS-usability-shuffle_and_queue",
+      "metric": "complaint_count",
+      "value": "7"
+    },
+    {
+      "claim_id": "C034",
+      "issue_id": "ISS-usability-shuffle_and_queue",
+      "metric": "severity_sum",
+      "value": "20"
+    },
+    {
+      "claim_id": "C035",
+      "issue_id": "ISS-usability-shuffle_and_queue",
+      "metric": "mean_severity",
+      "value": "2.857143"
+    },
+    {
+      "claim_id": "C036",
+      "issue_id": "ISS-usability-shuffle_and_queue",
+      "metric": "priority_score",
+      "value": "20"
+    },
+    {
+      "claim_id": "C037",
+      "issue_id": "ISS-playback-skips_or_wrong_song",
+      "metric": "complaint_count",
+      "value": "5"
+    },
+    {
+      "claim_id": "C038",
+      "issue_id": "ISS-playback-skips_or_wrong_song",
+      "metric": "severity_sum",
+      "value": "17"
+    },
+    {
+      "claim_id": "C039",
+      "issue_id": "ISS-playback-skips_or_wrong_song",
+      "metric": "mean_severity",
+      "value": "3.400000"
+    },
+    {
+      "claim_id": "C040",
+      "issue_id": "ISS-playback-skips_or_wrong_song",
+      "metric": "priority_score",
+      "value": "17"
+    }
+  ],
+  "context": [
+    {
+      "id": "Q001",
+      "quantity": "records: source_rows",
+      "value": "500"
+    },
+    {
+      "id": "Q002",
+      "quantity": "records: completed",
+      "value": "500"
+    },
+    {
+      "id": "Q003",
+      "quantity": "records: quarantined",
+      "value": "0"
+    },
+    {
+      "id": "Q004",
+      "quantity": "records: empty_text_quarantined",
+      "value": "0"
+    },
+    {
+      "id": "Q005",
+      "quantity": "records: other_unresolved",
+      "value": "0"
+    },
+    {
+      "id": "Q006",
+      "quantity": "completed complaint or cancellation records",
+      "value": "238"
+    },
+    {
+      "id": "Q007",
+      "quantity": "completed records with intent=cancellation",
+      "value": "24"
+    },
+    {
+      "id": "Q008",
+      "quantity": "completed records with intent=complaint",
+      "value": "214"
+    },
+    {
+      "id": "Q009",
+      "quantity": "completed records with intent=praise",
+      "value": "225"
+    },
+    {
+      "id": "Q010",
+      "quantity": "completed records with intent=request",
+      "value": "12"
+    },
+    {
+      "id": "Q011",
+      "quantity": "completed records with intent=unclear",
+      "value": "25"
+    },
+    {
+      "id": "Q012",
+      "quantity": "topic access: complaint/cancellation records",
+      "value": "10"
+    },
+    {
+      "id": "Q013",
+      "quantity": "topic access: severity_sum",
+      "value": "40"
+    },
+    {
+      "id": "Q014",
+      "quantity": "topic access: mean severity",
+      "value": "4.000000"
+    },
+    {
+      "id": "Q015",
+      "quantity": "topic access: share of all complaint/cancellation records (fraction)",
+      "value": "0.042017"
+    },
+    {
+      "id": "Q016",
+      "quantity": "topic access: cancellation-intent records",
+      "value": "0"
+    },
+    {
+      "id": "Q017",
+      "quantity": "topic access: severity 4-5 records",
+      "value": "9"
+    },
+    {
+      "id": "Q018",
+      "quantity": "topic usability: complaint/cancellation records",
+      "value": "57"
+    },
+    {
+      "id": "Q019",
+      "quantity": "topic usability: severity_sum",
+      "value": "131"
+    },
+    {
+      "id": "Q020",
+      "quantity": "topic usability: mean severity",
+      "value": "2.298246"
+    },
+    {
+      "id": "Q021",
+      "quantity": "topic usability: share of all complaint/cancellation records (fraction)",
+      "value": "0.239496"
+    },
+    {
+      "id": "Q022",
+      "quantity": "topic usability: cancellation-intent records",
+      "value": "4"
+    },
+    {
+      "id": "Q023",
+      "quantity": "topic usability: severity 4-5 records",
+      "value": "0"
+    },
+    {
+      "id": "Q024",
+      "quantity": "topic playback: complaint/cancellation records",
+      "value": "42"
+    },
+    {
+      "id": "Q025",
+      "quantity": "topic playback: severity_sum",
+      "value": "139"
+    },
+    {
+      "id": "Q026",
+      "quantity": "topic playback: mean severity",
+      "value": "3.309524"
+    },
+    {
+      "id": "Q027",
+      "quantity": "topic playback: share of all complaint/cancellation records (fraction)",
+      "value": "0.176471"
+    },
+    {
+      "id": "Q028",
+      "quantity": "topic playback: cancellation-intent records",
+      "value": "6"
+    },
+    {
+      "id": "Q029",
+      "quantity": "topic playback: severity 4-5 records",
+      "value": "17"
+    },
+    {
+      "id": "Q030",
+      "quantity": "topic downloads: complaint/cancellation records",
+      "value": "4"
+    },
+    {
+      "id": "Q031",
+      "quantity": "topic downloads: severity_sum",
+      "value": "15"
+    },
+    {
+      "id": "Q032",
+      "quantity": "topic downloads: mean severity",
+      "value": "3.750000"
+    },
+    {
+      "id": "Q033",
+      "quantity": "topic downloads: share of all complaint/cancellation records (fraction)",
+      "value": "0.016807"
+    },
+    {
+      "id": "Q034",
+      "quantity": "topic downloads: cancellation-intent records",
+      "value": "1"
+    },
+    {
+      "id": "Q035",
+      "quantity": "topic downloads: severity 4-5 records",
+      "value": "3"
+    },
+    {
+      "id": "Q036",
+      "quantity": "topic catalog: complaint/cancellation records",
+      "value": "16"
+    },
+    {
+      "id": "Q037",
+      "quantity": "topic catalog: severity_sum",
+      "value": "41"
+    },
+    {
+      "id": "Q038",
+      "quantity": "topic catalog: mean severity",
+      "value": "2.562500"
+    },
+    {
+      "id": "Q039",
+      "quantity": "topic catalog: share of all complaint/cancellation records (fraction)",
+      "value": "0.067227"
+    },
+    {
+      "id": "Q040",
+      "quantity": "topic catalog: cancellation-intent records",
+      "value": "0"
+    },
+    {
+      "id": "Q041",
+      "quantity": "topic catalog: severity 4-5 records",
+      "value": "0"
+    },
+    {
+      "id": "Q042",
+      "quantity": "topic billing: complaint/cancellation records",
+      "value": "50"
+    },
+    {
+      "id": "Q043",
+      "quantity": "topic billing: severity_sum",
+      "value": "143"
+    },
+    {
+      "id": "Q044",
+      "quantity": "topic billing: mean severity",
+      "value": "2.860000"
+    },
+    {
+      "id": "Q045",
+      "quantity": "topic billing: share of all complaint/cancellation records (fraction)",
+      "value": "0.210084"
+    },
+    {
+      "id": "Q046",
+      "quantity": "topic billing: cancellation-intent records",
+      "value": "5"
+    },
+    {
+      "id": "Q047",
+      "quantity": "topic billing: severity 4-5 records",
+      "value": "3"
+    },
+    {
+      "id": "Q048",
+      "quantity": "topic support: complaint/cancellation records",
+      "value": "0"
+    },
+    {
+      "id": "Q049",
+      "quantity": "topic support: severity_sum",
+      "value": "0"
+    },
+    {
+      "id": "Q050",
+      "quantity": "topic support: share of all complaint/cancellation records (fraction)",
+      "value": "0.000000"
+    },
+    {
+      "id": "Q051",
+      "quantity": "topic support: cancellation-intent records",
+      "value": "0"
+    },
+    {
+      "id": "Q052",
+      "quantity": "topic support: severity 4-5 records",
+      "value": "0"
+    },
+    {
+      "id": "Q053",
+      "quantity": "topic other: complaint/cancellation records",
+      "value": "59"
+    },
+    {
+      "id": "Q054",
+      "quantity": "topic other: severity_sum",
+      "value": "118"
+    },
+    {
+      "id": "Q055",
+      "quantity": "topic other: mean severity",
+      "value": "2.000000"
+    },
+    {
+      "id": "Q056",
+      "quantity": "topic other: share of all complaint/cancellation records (fraction)",
+      "value": "0.247899"
+    },
+    {
+      "id": "Q057",
+      "quantity": "topic other: cancellation-intent records",
+      "value": "8"
+    },
+    {
+      "id": "Q058",
+      "quantity": "topic other: severity 4-5 records",
+      "value": "0"
+    },
+    {
+      "id": "Q059",
+      "quantity": "ISS-billing-premium_restrictions_free_tier: rank",
+      "value": "1"
+    },
+    {
+      "id": "Q060",
+      "quantity": "ISS-billing-premium_restrictions_free_tier: cancellation-intent records",
+      "value": "5"
+    },
+    {
+      "id": "Q061",
+      "quantity": "ISS-billing-premium_restrictions_free_tier: severity 4-5 records",
+      "value": "1"
+    },
+    {
+      "id": "Q062",
+      "quantity": "ISS-other-general_criticism: rank",
+      "value": "2"
+    },
+    {
+      "id": "Q063",
+      "quantity": "ISS-other-general_criticism: cancellation-intent records",
+      "value": "5"
+    },
+    {
+      "id": "Q064",
+      "quantity": "ISS-other-general_criticism: severity 4-5 records",
+      "value": "0"
+    },
+    {
+      "id": "Q065",
+      "quantity": "ISS-usability-ads: rank",
+      "value": "3"
+    },
+    {
+      "id": "Q066",
+      "quantity": "ISS-usability-ads: cancellation-intent records",
+      "value": "2"
+    },
+    {
+      "id": "Q067",
+      "quantity": "ISS-usability-ads: severity 4-5 records",
+      "value": "0"
+    },
+    {
+      "id": "Q068",
+      "quantity": "ISS-playback-general: rank",
+      "value": "4"
+    },
+    {
+      "id": "Q069",
+      "quantity": "ISS-playback-general: cancellation-intent records",
+      "value": "3"
+    },
+    {
+      "id": "Q070",
+      "quantity": "ISS-playback-general: severity 4-5 records",
+      "value": "5"
+    },
+    {
+      "id": "Q071",
+      "quantity": "ISS-playback-crashes_or_wont_open: rank",
+      "value": "5"
+    },
+    {
+      "id": "Q072",
+      "quantity": "ISS-playback-crashes_or_wont_open: cancellation-intent records",
+      "value": "1"
+    },
+    {
+      "id": "Q073",
+      "quantity": "ISS-playback-crashes_or_wont_open: severity 4-5 records",
+      "value": "8"
+    },
+    {
+      "id": "Q074",
+      "quantity": "ISS-access-login_failure: rank",
+      "value": "6"
+    },
+    {
+      "id": "Q075",
+      "quantity": "ISS-access-login_failure: cancellation-intent records",
+      "value": "0"
+    },
+    {
+      "id": "Q076",
+      "quantity": "ISS-access-login_failure: severity 4-5 records",
+      "value": "6"
+    },
+    {
+      "id": "Q077",
+      "quantity": "ISS-usability-ui_redesign: rank",
+      "value": "7"
+    },
+    {
+      "id": "Q078",
+      "quantity": "ISS-usability-ui_redesign: cancellation-intent records",
+      "value": "0"
+    },
+    {
+      "id": "Q079",
+      "quantity": "ISS-usability-ui_redesign: severity 4-5 records",
+      "value": "0"
+    },
+    {
+      "id": "Q080",
+      "quantity": "ISS-playback-connection_or_loading: rank",
+      "value": "8"
+    },
+    {
+      "id": "Q081",
+      "quantity": "ISS-playback-connection_or_loading: cancellation-intent records",
+      "value": "0"
+    },
+    {
+      "id": "Q082",
+      "quantity": "ISS-playback-connection_or_loading: severity 4-5 records",
+      "value": "2"
+    },
+    {
+      "id": "Q083",
+      "quantity": "ISS-usability-shuffle_and_queue: rank",
+      "value": "9"
+    },
+    {
+      "id": "Q084",
+      "quantity": "ISS-usability-shuffle_and_queue: cancellation-intent records",
+      "value": "0"
+    },
+    {
+      "id": "Q085",
+      "quantity": "ISS-usability-shuffle_and_queue: severity 4-5 records",
+      "value": "0"
+    },
+    {
+      "id": "Q086",
+      "quantity": "ISS-playback-skips_or_wrong_song: rank",
+      "value": "10"
+    },
+    {
+      "id": "Q087",
+      "quantity": "ISS-playback-skips_or_wrong_song: cancellation-intent records",
+      "value": "1"
+    },
+    {
+      "id": "Q088",
+      "quantity": "ISS-playback-skips_or_wrong_song: severity 4-5 records",
+      "value": "2"
+    },
+    {
+      "id": "Q089",
+      "quantity": "verifier sample size compared",
+      "value": "50"
+    },
+    {
+      "id": "Q090",
+      "quantity": "verifier agreement (topic) as fraction",
+      "value": "0.9"
+    },
+    {
+      "id": "Q091",
+      "quantity": "verifier agreement (intent) as fraction",
+      "value": "0.96"
+    },
+    {
+      "id": "Q092",
+      "quantity": "verifier agreement (severity) as fraction",
+      "value": "0.86"
+    },
+    {
+      "id": "Q093",
+      "quantity": "verifier agreement (all3) as fraction",
+      "value": "0.78"
+    },
+    {
+      "id": "Q094",
+      "quantity": "verifier severity mean absolute error",
+      "value": "0.14"
+    }
+  ],
+  "evidence_pack": {
+    "ISS-access-login_failure": {
+      "coherence": "high",
+      "examples": [
+        {
+          "intent": "complaint",
+          "quote": "now I am not even able to log in into my application",
+          "review_id": "9ce5f16c-aef0-48eb-ace1-91905796bc3d",
+          "severity": 4
+        },
+        {
+          "intent": "complaint",
+          "quote": "Getting no token provided message. Don't understand it, can't fix it and it's making me angry enough to unsusubscribe.",
+          "review_id": "686fa8a8-f220-4ddd-b283-d61dd242051a",
+          "severity": 4
+        },
+        {
+          "intent": "complaint",
+          "quote": "I can't login to the app, it keep saying that there's no internet connection, whereas everything else on my phone is connected to the internet.",
+          "review_id": "12efd15d-4d4f-4a71-8e71-69d03b6f983a",
+          "severity": 4
+        },
+        {
+          "intent": "complaint",
+          "quote": "It not letting me into my account and there are to many ads",
+          "review_id": "32fb340f-4f9f-4551-8dae-755221e58d6a",
+          "severity": 4
+        }
+      ],
+      "name": "Cannot log in to app"
+    },
+    "ISS-billing-premium_restrictions_free_tier": {
+      "coherence": "high",
+      "examples": [
+        {
+          "intent": "complaint",
+          "quote": "They are literally forcing us to purchase Spotify premium.",
+          "review_id": "86adc9b6-be58-400c-9a08-aa082ff0535c",
+          "severity": 2
+        },
+        {
+          "intent": "complaint",
+          "quote": "It is a wonderful song app but In latest update everything depend upon premium",
+          "review_id": "237e6174-4921-44df-828c-28f7b9d6196e",
+          "severity": 3
+        },
+        {
+          "intent": "complaint",
+          "quote": "Trash I hate this app I can't pick ANY song I want it's only a stupid Playlist that pops up I WANT TO LISTEN TO A SPECIFIC GODDAMN SONG NOT WASTE ALL MY SKIPS TO NOT EVEN GET TO PLAY THE SONG",
+          "review_id": "f9cf3b4a-c40e-4578-9f6f-358807450b0f",
+          "severity": 3
+        },
+        {
+          "intent": "complaint",
+          "quote": "What kind of stupidity is this? Na queue m lgte h gaane, na skip kr skte h, na random chla skte h, kya bkchodi h ye??? Jaruri h premium lena? Nhi lena bhai thodi to sharam kro saare paise tumhi kma loge kya💀💀 alag hi pagapan h",
+          "review_id": "89ea2c30-db8b-459d-8ab7-bbcb7f92c774",
+          "severity": 3
+        }
+      ],
+      "name": "Free tier features restricted, premium forced"
+    },
+    "ISS-other-general_criticism": {
+      "coherence": "high",
+      "examples": [
+        {
+          "intent": "complaint",
+          "quote": "Worst app ever they only care about money",
+          "review_id": "f5cc511f-ae71-4985-a737-1c0075156e2b",
+          "severity": 2
+        },
+        {
+          "intent": "cancellation",
+          "quote": "Uninstall this all",
+          "review_id": "1ee942bb-a3de-4380-8c08-a15949687c6c",
+          "severity": 2
+        },
+        {
+          "intent": "complaint",
+          "quote": "It was a good app . But now it's a trash 🗑️",
+          "review_id": "c1ab120a-f91f-4ee3-87f5-66f352e2d47f",
+          "severity": 2
+        },
+        {
+          "intent": "complaint",
+          "quote": "Recent update bad and needs rework",
+          "review_id": "0d9c62d1-2b53-4887-8156-a28eeac86e82",
+          "severity": 2
+        }
+      ],
+      "name": "App quality degradation complaints"
+    },
+    "ISS-playback-crashes_or_wont_open": {
+      "coherence": "high",
+      "examples": [
+        {
+          "intent": "complaint",
+          "quote": "App is stuck on loading/logo screen",
+          "review_id": "66a29b3c-c14d-440e-b722-b23e0c99ae82",
+          "severity": 4
+        },
+        {
+          "intent": "complaint",
+          "quote": "The latest update has caused my app to crash I cant open the app please fix.",
+          "review_id": "55cc3abf-c295-4591-8c3a-78085cfdefaa",
+          "severity": 4
+        },
+        {
+          "intent": "complaint",
+          "quote": "Black screen of death. Having to Uninstaller and reinstall",
+          "review_id": "065c418e-7f18-42a3-b241-fe693b7a2b0c",
+          "severity": 4
+        },
+        {
+          "intent": "complaint",
+          "quote": "Have been using Spotify for a very long time but now the app is just crashing since the latest update.",
+          "review_id": "4a806587-0dde-4fb4-b4f1-f5c7d197c927",
+          "severity": 4
+        }
+      ],
+      "name": "App crashes or fails to open"
+    },
+    "ISS-playback-general": {
+      "coherence": "high",
+      "examples": [
+        {
+          "intent": "complaint",
+          "quote": "Doesn't let me play songs",
+          "review_id": "4c34f240-76d4-451a-ac74-5bc6bd484825",
+          "severity": 4
+        },
+        {
+          "intent": "complaint",
+          "quote": "Won't cast to other devices. Gives me random songs I hate. This app should be renamed the helicopter app cuz it doesn't play music and just shows a spinning iconic kind of looks like a helicopter",
+          "review_id": "c7df9cb8-7bec-4036-a6a1-1353d2d705d8",
+          "severity": 4
+        },
+        {
+          "intent": "cancellation",
+          "quote": "New update had made this app worst for streaming music. Shifting to better apps",
+          "review_id": "a598cfe0-473b-4665-9eb2-4eebb3c1d877",
+          "severity": 2
+        },
+        {
+          "intent": "complaint",
+          "quote": "I have a Samsung and after a week of using this app it like wouldn't let me listen to music",
+          "review_id": "d3b74f36-aa48-42af-ae4a-d4a8b0499a60",
+          "severity": 4
+        }
+      ],
+      "name": "App won't play music or gets stuck"
+    },
+    "ISS-usability-ads": {
+      "coherence": "high",
+      "examples": [
+        {
+          "intent": "complaint",
+          "quote": "This app is nice but adds are too much",
+          "review_id": "85383985-844d-4f9b-bcd9-d6016ac35f6b",
+          "severity": 2
+        },
+        {
+          "intent": "complaint",
+          "quote": "Have a lot of ads",
+          "review_id": "aa86aa43-19d5-40b4-8b03-535a96346e18",
+          "severity": 2
+        },
+        {
+          "intent": "cancellation",
+          "quote": "I m using this app from 5 to 6 year but now m uninstald this app cz his premium adds are everywhere now .",
+          "review_id": "035213ba-b1b9-411c-b028-70296e5f0e73",
+          "severity": 2
+        },
+        {
+          "intent": "complaint",
+          "quote": "music k naam pe khaali ad dikhata hai",
+          "review_id": "6eb64519-37d4-4591-a47a-bbb96357de36",
+          "severity": 2
+        }
+      ],
+      "name": "Excessive ads in free version"
+    }
+  },
+  "issue_names": {
+    "ISS-access-login_failure": "Cannot log in to app",
+    "ISS-billing-premium_restrictions_free_tier": "Free tier features restricted, premium forced",
+    "ISS-other-general_criticism": "App quality degradation complaints",
+    "ISS-playback-connection_or_loading": "Connection or loading failures",
+    "ISS-playback-crashes_or_wont_open": "App crashes or fails to open",
+    "ISS-playback-general": "App won't play music or gets stuck",
+    "ISS-playback-skips_or_wrong_song": "App plays wrong song when selected",
+    "ISS-usability-ads": "Excessive ads in free version",
+    "ISS-usability-shuffle_and_queue": "Shuffle repeats same songs or malfunctions",
+    "ISS-usability-ui_redesign": "New home screen and layout changes"
+  }
+}

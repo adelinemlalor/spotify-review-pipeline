@@ -1,0 +1,126 @@
+[
+  {
+    "config": {
+      "enrich": {
+        "batch": "<=50 reviews",
+        "effort": "none (thinking off)",
+        "max_chars_per_request": 14000,
+        "max_output_tokens": 4096,
+        "max_reviews_per_request": 50,
+        "model": "claude-haiku-4-5",
+        "prompt_version": "enrich-v1",
+        "provider": "anthropic",
+        "role": "enrich",
+        "schema_version": "schema-v1",
+        "temperature": 0.0
+      },
+      "group": {
+        "batch": "<=10 issues",
+        "effort": "none (thinking off)",
+        "examples_per_issue": 12,
+        "max_output_tokens": 4096,
+        "model": "claude-haiku-4-5",
+        "prompt_version": "group-v1",
+        "provider": "anthropic",
+        "role": "group"
+      },
+      "memo": {
+        "batch": "1",
+        "effort": "medium (adaptive thinking)",
+        "max_output_tokens": 8000,
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "memo-v1",
+        "provider": "anthropic",
+        "role": "memo"
+      },
+      "verify": {
+        "batch": "<=50",
+        "effort": "low (thinking between_tools = off)",
+        "max_output_tokens": 2048,
+        "max_reviews_per_request": 50,
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "verify-v1",
+        "provider": "anthropic",
+        "role": "verify",
+        "seed": "a5-verify-v1"
+      }
+    },
+    "input_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+    "pipeline_wall_clock_s": 38.961,
+    "result_cache": "empty",
+    "run": "cold",
+    "run_id": "20261004T160324",
+    "stage_seconds": {
+      "enrich": 16.677,
+      "group": 6.832,
+      "memo": 13.088,
+      "prepare": 0.003,
+      "rank": 0.007,
+      "verify": 2.345
+    },
+    "wall_clock_s": 39.163,
+    "workers": 1
+  },
+  {
+    "config": {
+      "enrich": {
+        "batch": "<=50 reviews",
+        "effort": "none (thinking off)",
+        "max_chars_per_request": 14000,
+        "max_output_tokens": 4096,
+        "max_reviews_per_request": 50,
+        "model": "claude-haiku-4-5",
+        "prompt_version": "enrich-v1",
+        "provider": "anthropic",
+        "role": "enrich",
+        "schema_version": "schema-v1",
+        "temperature": 0.0
+      },
+      "group": {
+        "batch": "<=10 issues",
+        "effort": "none (thinking off)",
+        "examples_per_issue": 12,
+        "max_output_tokens": 4096,
+        "model": "claude-haiku-4-5",
+        "prompt_version": "group-v1",
+        "provider": "anthropic",
+        "role": "group"
+      },
+      "memo": {
+        "batch": "1",
+        "effort": "medium (adaptive thinking)",
+        "max_output_tokens": 8000,
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "memo-v1",
+        "provider": "anthropic",
+        "role": "memo"
+      },
+      "verify": {
+        "batch": "<=50",
+        "effort": "low (thinking between_tools = off)",
+        "max_output_tokens": 2048,
+        "max_reviews_per_request": 50,
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "verify-v1",
+        "provider": "anthropic",
+        "role": "verify",
+        "seed": "a5-verify-v1"
+      }
+    },
+    "input_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+    "pipeline_wall_clock_s": 0.008,
+    "result_cache": "warm",
+    "run": "warm",
+    "run_id": "20261004T160403",
+    "stage_seconds": {
+      "enrich": 0.0,
+      "group": 0.001,
+      "memo": 0.001,
+      "prepare": 0.001,
+      "rank": 0.001,
+      "verify": 0.001
+    },
+    "wall_clock_s": 0.109,
+    "workers": 1
+  }
+]

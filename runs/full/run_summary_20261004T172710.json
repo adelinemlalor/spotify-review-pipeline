@@ -1,0 +1,60 @@
+{
+  "calls_this_invocation": [
+    {
+      "attempts": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.024196,
+      "input_tokens": 15871,
+      "outcome": "succeeded",
+      "output_tokens": 1665,
+      "role": "group"
+    },
+    {
+      "attempts": 1,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.030812,
+      "input_tokens": 7271,
+      "outcome": "succeeded",
+      "output_tokens": 1627,
+      "role": "memo"
+    },
+    {
+      "attempts": 20,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.22331,
+      "input_tokens": 59990,
+      "outcome": "succeeded",
+      "output_tokens": 10333,
+      "role": "verify"
+    }
+  ],
+  "cost_basis": "computed from provider-reported usage x config.PRICES (standard or batch tier)",
+  "coverage": {
+    "cache_reuse_records": 176420,
+    "completed": 660591,
+    "empty_text_quarantined": 13,
+    "other_unresolved": 18,
+    "quarantined": 31,
+    "source_rows": 660622
+  },
+  "enrich": {},
+  "partial": false,
+  "record_statuses": {
+    "completed": 660591,
+    "quarantined": 31
+  },
+  "run_id": "20261004T172710",
+  "spend_all_invocations_usd": 43.941905,
+  "spend_this_invocation_usd": 0.278318,
+  "stage_seconds": {
+    "group": 23.536,
+    "memo": 12.051,
+    "prepare": 0.057,
+    "rank": 1.813,
+    "verify": 77.093
+  },
+  "wall_clock_s": 126.981
+}

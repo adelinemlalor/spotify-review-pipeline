@@ -1,0 +1,24 @@
+{
+  "agreement": {
+    "all3": 0.78,
+    "intent": 0.96,
+    "severity": 0.86,
+    "topic": 0.9
+  },
+  "compared": 50,
+  "declared_sample_size": 50,
+  "disagreements": 11,
+  "enricher_label_config": "claude-haiku-4-5+enrich-v1+schema-v1+t0",
+  "planted_error_test": {
+    "detection_rate": 1.0,
+    "excluded_from_business_aggregates": true,
+    "flagged_by_comparison": 10,
+    "note": "Planted errors live only in this test copy; production records are unchanged.",
+    "planted_wrong_topics": 10,
+    "synthetic_test": true
+  },
+  "seed": "a5-verify-v1",
+  "severity_mae": 0.14,
+  "verifier_model": "claude-sonnet-5-5",
+  "verifier_prompt": "verify-v1"
+}

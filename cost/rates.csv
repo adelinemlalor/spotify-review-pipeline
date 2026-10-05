@@ -1,0 +1,18 @@
+provider,model,tier,item,unit,usd_per_unit,source_url,checked_date,notes
+anthropic,claude-haiku-4-5,standard,uncached_input,1M tokens,1.00,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,base input
+anthropic,claude-haiku-4-5,standard,cache_write,1M tokens,1.25,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,5-minute TTL prompt-cache write (1.25x input)
+anthropic,claude-haiku-4-5,standard,cache_read,1M tokens,0.10,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,prompt-cache hit (0.1x input)
+anthropic,claude-haiku-4-5,standard,output,1M tokens,5.00,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,no thinking tokens (thinking off)
+anthropic,claude-haiku-4-5,batch,uncached_input,1M tokens,0.50,https://platform.claude.com/docs/en/build-with-claude/batch-processing,2026-10-04,Message Batches 50% of standard
+anthropic,claude-haiku-4-5,batch,cache_write,1M tokens,0.625,https://platform.claude.com/docs/en/build-with-claude/batch-processing,2026-10-04,Message Batches 50% of standard
+anthropic,claude-haiku-4-5,batch,cache_read,1M tokens,0.05,https://platform.claude.com/docs/en/build-with-claude/batch-processing,2026-10-04,Message Batches 50% of standard
+anthropic,claude-haiku-4-5,batch,output,1M tokens,2.50,https://platform.claude.com/docs/en/build-with-claude/batch-processing,2026-10-04,Message Batches 50% of standard
+anthropic,claude-sonnet-5-5,standard,uncached_input,1M tokens,2.00,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,base input
+anthropic,claude-sonnet-5-5,standard,cache_write,1M tokens,2.50,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,5-minute TTL prompt-cache write
+anthropic,claude-sonnet-5-5,standard,cache_read,1M tokens,0.20,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,prompt-cache hit
+anthropic,claude-sonnet-5-5,standard,output,1M tokens,10.00,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,includes any thinking tokens (billed as output; not double-counted)
+anthropic,claude-sonnet-5-5,batch,uncached_input,1M tokens,1.00,https://platform.claude.com/docs/en/build-with-claude/batch-processing,2026-10-04,Message Batches 50% of standard
+anthropic,claude-sonnet-5-5,batch,cache_write,1M tokens,1.25,https://platform.claude.com/docs/en/build-with-claude/batch-processing,2026-10-04,Message Batches 50% of standard
+anthropic,claude-sonnet-5-5,batch,cache_read,1M tokens,0.10,https://platform.claude.com/docs/en/build-with-claude/batch-processing,2026-10-04,Message Batches 50% of standard
+anthropic,claude-sonnet-5-5,batch,output,1M tokens,5.00,https://platform.claude.com/docs/en/build-with-claude/batch-processing,2026-10-04,Message Batches 50% of standard
+local,laptop,local,compute,hour,unknown,,2026-10-04,"local Python/SQLite orchestration on the author's laptop; electricity/hardware cost not measured (reported as unknown, not zero)"

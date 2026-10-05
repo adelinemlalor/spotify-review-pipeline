@@ -1,0 +1,95 @@
+id,quantity,value
+Q001,records: source_rows,100
+Q002,records: completed,100
+Q003,records: quarantined,0
+Q004,records: empty_text_quarantined,0
+Q005,records: other_unresolved,0
+Q006,completed complaint or cancellation records,50
+Q007,completed records with intent=cancellation,8
+Q008,completed records with intent=complaint,42
+Q009,completed records with intent=praise,42
+Q010,completed records with intent=request,2
+Q011,completed records with intent=unclear,6
+Q012,topic access: complaint/cancellation records,2
+Q013,topic access: severity_sum,8
+Q014,topic access: mean severity,4.000000
+Q015,topic access: share of all complaint/cancellation records (fraction),0.040000
+Q016,topic access: cancellation-intent records,0
+Q017,topic access: severity 4-5 records,2
+Q018,topic usability: complaint/cancellation records,12
+Q019,topic usability: severity_sum,30
+Q020,topic usability: mean severity,2.500000
+Q021,topic usability: share of all complaint/cancellation records (fraction),0.240000
+Q022,topic usability: cancellation-intent records,3
+Q023,topic usability: severity 4-5 records,0
+Q024,topic playback: complaint/cancellation records,9
+Q025,topic playback: severity_sum,29
+Q026,topic playback: mean severity,3.222222
+Q027,topic playback: share of all complaint/cancellation records (fraction),0.180000
+Q028,topic playback: cancellation-intent records,2
+Q029,topic playback: severity 4-5 records,3
+Q030,topic downloads: complaint/cancellation records,1
+Q031,topic downloads: severity_sum,4
+Q032,topic downloads: mean severity,4.000000
+Q033,topic downloads: share of all complaint/cancellation records (fraction),0.020000
+Q034,topic downloads: cancellation-intent records,0
+Q035,topic downloads: severity 4-5 records,1
+Q036,topic catalog: complaint/cancellation records,5
+Q037,topic catalog: severity_sum,11
+Q038,topic catalog: mean severity,2.200000
+Q039,topic catalog: share of all complaint/cancellation records (fraction),0.100000
+Q040,topic catalog: cancellation-intent records,0
+Q041,topic catalog: severity 4-5 records,0
+Q042,topic billing: complaint/cancellation records,10
+Q043,topic billing: severity_sum,29
+Q044,topic billing: mean severity,2.900000
+Q045,topic billing: share of all complaint/cancellation records (fraction),0.200000
+Q046,topic billing: cancellation-intent records,1
+Q047,topic billing: severity 4-5 records,0
+Q048,topic support: complaint/cancellation records,0
+Q049,topic support: severity_sum,0
+Q050,topic support: share of all complaint/cancellation records (fraction),0.000000
+Q051,topic support: cancellation-intent records,0
+Q052,topic support: severity 4-5 records,0
+Q053,topic other: complaint/cancellation records,11
+Q054,topic other: severity_sum,22
+Q055,topic other: mean severity,2.000000
+Q056,topic other: share of all complaint/cancellation records (fraction),0.220000
+Q057,topic other: cancellation-intent records,2
+Q058,topic other: severity 4-5 records,0
+Q059,ISS-billing-premium_restrictions_free_tier: rank,1
+Q060,ISS-billing-premium_restrictions_free_tier: cancellation-intent records,1
+Q061,ISS-billing-premium_restrictions_free_tier: severity 4-5 records,0
+Q062,ISS-other-general_criticism: rank,2
+Q063,ISS-other-general_criticism: cancellation-intent records,1
+Q064,ISS-other-general_criticism: severity 4-5 records,0
+Q065,ISS-usability-ads: rank,3
+Q066,ISS-usability-ads: cancellation-intent records,1
+Q067,ISS-usability-ads: severity 4-5 records,0
+Q068,ISS-playback-crashes_or_wont_open: rank,4
+Q069,ISS-playback-crashes_or_wont_open: cancellation-intent records,1
+Q070,ISS-playback-crashes_or_wont_open: severity 4-5 records,3
+Q071,ISS-playback-general: rank,5
+Q072,ISS-playback-general: cancellation-intent records,1
+Q073,ISS-playback-general: severity 4-5 records,0
+Q074,ISS-usability-navigation_and_controls: rank,6
+Q075,ISS-usability-navigation_and_controls: cancellation-intent records,2
+Q076,ISS-usability-navigation_and_controls: severity 4-5 records,0
+Q077,ISS-access-login_failure: rank,7
+Q078,ISS-access-login_failure: cancellation-intent records,0
+Q079,ISS-access-login_failure: severity 4-5 records,2
+Q080,ISS-catalog-missing_or_removed_content: rank,8
+Q081,ISS-catalog-missing_or_removed_content: cancellation-intent records,0
+Q082,ISS-catalog-missing_or_removed_content: severity 4-5 records,0
+Q083,ISS-catalog-lyrics: rank,9
+Q084,ISS-catalog-lyrics: cancellation-intent records,0
+Q085,ISS-catalog-lyrics: severity 4-5 records,0
+Q086,ISS-downloads-offline_mode: rank,10
+Q087,ISS-downloads-offline_mode: cancellation-intent records,0
+Q088,ISS-downloads-offline_mode: severity 4-5 records,1
+Q089,verifier sample size compared,20
+Q090,verifier agreement (topic) as fraction,0.85
+Q091,verifier agreement (intent) as fraction,0.9
+Q092,verifier agreement (severity) as fraction,0.9
+Q093,verifier agreement (all3) as fraction,0.85
+Q094,verifier severity mean absolute error,0.1

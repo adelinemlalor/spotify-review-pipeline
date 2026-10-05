@@ -1,0 +1,18 @@
+{
+  "_comment": "Editable assumptions for the full-run projection. Measured pilot results are never changed by these values.",
+  "budget_usd": 60.0,
+  "full_rows": 660622,
+  "nonempty_rows": 660609,
+  "empty_quarantines": 13,
+  "distinct_nonempty_texts": 484189,
+  "enrich_tier": "batch",
+  "max_workers": 4,
+  "output_token_cap_per_request": 4096,
+  "max_fallback_fraction": 0.005,
+  "verify_sample_full_run": 1000,
+  "base": {"invalid_retry_rate": "measured", "fallback_rate": "measured", "transient_failure_rate": "measured",
+           "cache_write_requests_fraction": 0.01},
+  "conservative": {"invalid_retry_rate_min": 0.03, "invalid_retry_multiplier": 3, "fallback_rate": 0.005,
+                   "transient_failure_rate_min": 0.02, "cache_write_requests_fraction": 0.10,
+                   "output_tokens_multiplier": 1.25}
+}

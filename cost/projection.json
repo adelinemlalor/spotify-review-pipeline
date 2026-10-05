@@ -1,0 +1,784 @@
+{
+ "pilot_derived": {
+  "reviews_per_request": 50.0,
+  "system_tokens_per_request": 5202.0,
+  "uncached_input_tokens_per_review": 32.28,
+  "output_tokens_per_review": 21.18,
+  "measured_rates": {
+   "invalid_retry_rate": 0.0,
+   "fallback_rate": 0.0,
+   "transient_failure_rate": 0.0
+  },
+  "one_worker_reviews_per_second": 6.158393890873261
+ },
+ "scenarios": [
+  {
+   "scenario": "base",
+   "distinct_texts_sent": 484189,
+   "enrich_requests": 9684,
+   "assumed_retry_rate": 0.0,
+   "assumed_fallback_rate": 0.0,
+   "cache_write_fraction": 0.01,
+   "lines": [
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "uncached_input",
+     "units": 15629621,
+     "usd": 7.8148104599999995
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "cache_read",
+     "units": 49872406,
+     "usd": 2.4936203160000003
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "cache_write",
+     "units": 503762,
+     "usd": 0.31485105
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "output",
+     "units": 10255123,
+     "usd": 25.63780755
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 81550,
+     "usd": 0.1631
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 10300,
+     "usd": 0.10300000000000001
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 6598,
+     "usd": 0.0065975
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 1368,
+     "usd": 0.006837500000000001
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 7363,
+     "usd": 0.014726
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 1776,
+     "usd": 0.01776
+    }
+   ],
+   "total_usd": 36.573110376,
+   "unknown_items": 0,
+   "exceeds_budget": false,
+   "modeled_realtime_hours": 5.46,
+   "workers": 4,
+   "reuse": "with exact-text reuse"
+  },
+  {
+   "scenario": "conservative",
+   "distinct_texts_sent": 484189,
+   "enrich_requests": 9684,
+   "assumed_retry_rate": 0.03,
+   "assumed_fallback_rate": 0.005,
+   "cache_write_fraction": 0.1,
+   "lines": [
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "uncached_input",
+     "units": 15629621,
+     "usd": 7.8148104599999995
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "cache_read",
+     "units": 45338551,
+     "usd": 2.2669275600000005
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "cache_write",
+     "units": 5037617,
+     "usd": 3.148510500000001
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "output",
+     "units": 12818904,
+     "usd": 32.047259437499996
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 609555,
+     "usd": 0.6095552158800001
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 37782126,
+     "usd": 3.7782126000000003
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 384567,
+     "usd": 1.9228355662499999
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 6299622,
+     "usd": 15.749055000000002
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 78148,
+     "usd": 0.1562962092
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 76913,
+     "usd": 0.7691342265000002
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 81550,
+     "usd": 0.1631
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 10300,
+     "usd": 0.10300000000000001
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 6598,
+     "usd": 0.0065975
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 1368,
+     "usd": 0.006837500000000001
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 14726,
+     "usd": 0.029452
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 3552,
+     "usd": 0.03552
+    }
+   ],
+   "total_usd": 68.60710377533,
+   "unknown_items": 0,
+   "exceeds_budget": true,
+   "modeled_realtime_hours": 5.62,
+   "workers": 4,
+   "reuse": "with exact-text reuse"
+  },
+  {
+   "scenario": "base",
+   "distinct_texts_sent": 660609,
+   "enrich_requests": 13213,
+   "assumed_retry_rate": 0.0,
+   "assumed_fallback_rate": 0.0,
+   "cache_write_fraction": 0.01,
+   "lines": [
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "uncached_input",
+     "units": 21324459,
+     "usd": 10.66222926
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "cache_read",
+     "units": 68046686,
+     "usd": 3.402334287
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "cache_write",
+     "units": 687340,
+     "usd": 0.4295876625
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "output",
+     "units": 13991699,
+     "usd": 34.97924655
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 81550,
+     "usd": 0.1631
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 10300,
+     "usd": 0.10300000000000001
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 6598,
+     "usd": 0.0065975
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 1368,
+     "usd": 0.006837500000000001
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 7363,
+     "usd": 0.014726
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 1776,
+     "usd": 0.01776
+    }
+   ],
+   "total_usd": 49.7854187595,
+   "unknown_items": 0,
+   "exceeds_budget": false,
+   "modeled_realtime_hours": 7.45,
+   "workers": 4,
+   "reuse": "no reuse"
+  },
+  {
+   "scenario": "conservative",
+   "distinct_texts_sent": 660609,
+   "enrich_requests": 13213,
+   "assumed_retry_rate": 0.03,
+   "assumed_fallback_rate": 0.005,
+   "cache_write_fraction": 0.1,
+   "lines": [
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "uncached_input",
+     "units": 21324459,
+     "usd": 10.66222926
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "cache_read",
+     "units": 61860623,
+     "usd": 3.09303117
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "cache_write",
+     "units": 6873403,
+     "usd": 4.295876625000001
+    },
+    {
+     "stage": "enrich",
+     "model": "claude-haiku-4-5",
+     "tier": "batch",
+     "item": "output",
+     "units": 17489623,
+     "usd": 43.7240581875
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 831654,
+     "usd": 0.83165388228
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 51551820,
+     "usd": 5.155182000000001
+    },
+    {
+     "stage": "enrich_retry",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 524689,
+     "usd": 2.62344349125
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 8593704,
+     "usd": 21.484260000000003
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 106622,
+     "usd": 0.2132445852
+    },
+    {
+     "stage": "enrich_fallback",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 104938,
+     "usd": 1.0493773965000002
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 81550,
+     "usd": 0.1631
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "verify",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 10300,
+     "usd": 0.10300000000000001
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 6598,
+     "usd": 0.0065975
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "group",
+     "model": "claude-haiku-4-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 1368,
+     "usd": 0.006837500000000001
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "uncached_input",
+     "units": 14726,
+     "usd": 0.029452
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_write",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "cache_read",
+     "units": 0,
+     "usd": 0.0
+    },
+    {
+     "stage": "memo",
+     "model": "claude-sonnet-5-5",
+     "tier": "standard",
+     "item": "output",
+     "units": 3552,
+     "usd": 0.03552
+    }
+   ],
+   "total_usd": 93.47686359773,
+   "unknown_items": 0,
+   "exceeds_budget": true,
+   "modeled_realtime_hours": 7.67,
+   "workers": 4,
+   "reuse": "no reuse"
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+16:31:39 [prepare] source already loaded (660622 rows); skipping re-ingest
+16:31:46 [batch] phase=resume cache_hits=0 pending distinct=470489 requests=9410 chunks this run=10 (chunk size 1000) budget=$55.00
+16:31:50 [batch] submitted msgbatch_0157XZ6BtUQV54TToMGtYSbD: 1000 requests, reserved worst-case $15.92 (spent $0.00, reserved $15.92)
+16:31:53 [batch] submitted msgbatch_01URhaa4jdec2ZsJmatSL4aP: 1000 requests, reserved worst-case $15.86 (spent $0.00, reserved $31.78)
+16:32:01 [batch] submitted msgbatch_014cF3o6DBtKJj9wZJgbAuC2: 1000 requests, reserved worst-case $16.00 (spent $0.00, reserved $47.78)
+16:32:02 [batch] 3 in flight; processing=3000 succeeded=0 errored=0
+16:32:34 [batch] 3 in flight; processing=3000 succeeded=0 errored=0
+16:33:05 [batch] 3 in flight; processing=3000 succeeded=0 errored=0
+16:33:36 [batch] 3 in flight; processing=3000 succeeded=0 errored=0
+16:34:08 [batch] 3 in flight; processing=3000 succeeded=0 errored=0
+16:34:39 [batch] 3 in flight; processing=3000 succeeded=0 errored=0
+16:35:11 [batch] 3 in flight; processing=3000 succeeded=0 errored=0
+16:35:42 [batch] 3 in flight; processing=3000 succeeded=0 errored=0
+16:38:52 [batch] ingested 1000 results from msgbatch_0157XZ6BtUQV54TToMGtYSbD
+16:38:52 [batch] msgbatch_0157XZ6BtUQV54TToMGtYSbD settled: actual batch cost $4.0644; run spend $4.2348
+16:38:54 [batch] submitted msgbatch_01U26MsV24Tj4s25EWd4pi5s: 1000 requests, reserved worst-case $15.97 (spent $4.23, reserved $47.82)
+16:41:24 [batch] ingested 1000 results from msgbatch_01URhaa4jdec2ZsJmatSL4aP
+16:41:25 [batch] msgbatch_01URhaa4jdec2ZsJmatSL4aP settled: actual batch cost $3.9659; run spend $8.3433
+16:45:05 [batch] ingested 1000 results from msgbatch_014cF3o6DBtKJj9wZJgbAuC2
+16:45:05 [batch] msgbatch_014cF3o6DBtKJj9wZJgbAuC2 settled: actual batch cost $4.3217; run spend $12.8792
+16:45:09 [batch] submitted msgbatch_01Njf51dkySXYTKb6CuMhxZt: 1000 requests, reserved worst-case $16.09 (spent $12.88, reserved $32.05)
+16:48:00 [batch] ingested 1000 results from msgbatch_01U26MsV24Tj4s25EWd4pi5s
+16:48:00 [batch] msgbatch_01U26MsV24Tj4s25EWd4pi5s settled: actual batch cost $4.0301; run spend $17.0686
+16:48:02 [batch] submitted msgbatch_01TLmcavhyt9TCah8XJemQzP: 1000 requests, reserved worst-case $15.61 (spent $17.07, reserved $31.70)
+16:48:02 [batch] 2 in flight; processing=2000 succeeded=0 errored=0
+16:48:33 [batch] 2 in flight; processing=2000 succeeded=0 errored=0
+16:49:04 [batch] 2 in flight; processing=2000 succeeded=0 errored=0
+16:49:35 [batch] 2 in flight; processing=2000 succeeded=0 errored=0
+16:50:06 [batch] 2 in flight; processing=2000 succeeded=0 errored=0
+16:50:37 [batch] 2 in flight; processing=2000 succeeded=0 errored=0
+16:51:09 [batch] 2 in flight; processing=2000 succeeded=0 errored=0
+16:51:41 [batch] 2 in flight; processing=2000 succeeded=0 errored=0
+16:55:29 [batch] ingested 1000 results from msgbatch_01Njf51dkySXYTKb6CuMhxZt
+16:55:30 [batch] msgbatch_01Njf51dkySXYTKb6CuMhxZt settled: actual batch cost $4.1769; run spend $21.4388
+16:55:31 [batch] submitted msgbatch_01JbQiCWSZgW7rWawBn2tRyu: 1000 requests, reserved worst-case $16.01 (spent $21.44, reserved $31.62)
+16:57:47 [batch] ingested 1000 results from msgbatch_01TLmcavhyt9TCah8XJemQzP
+16:57:47 [batch] msgbatch_01TLmcavhyt9TCah8XJemQzP settled: actual batch cost $3.8464; run spend $25.4093
+16:57:47 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+16:58:18 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+16:58:48 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:02:52 [batch] ingested 1000 results from msgbatch_01JbQiCWSZgW7rWawBn2tRyu
+17:02:52 [batch] msgbatch_01JbQiCWSZgW7rWawBn2tRyu settled: actual batch cost $4.1592; run spend $29.7598
+17:02:56 [batch] submitted msgbatch_013anxgx81tbwtiicnH8fHiu: 1000 requests, reserved worst-case $16.26 (spent $29.76, reserved $16.26)
+17:02:56 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:03:27 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:03:57 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:04:28 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:04:58 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:05:29 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:06:00 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:06:30 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:07:01 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:07:31 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:08:02 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:08:32 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:09:03 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:13:44 [batch] ingested 1000 results from msgbatch_013anxgx81tbwtiicnH8fHiu
+17:13:45 [batch] msgbatch_013anxgx81tbwtiicnH8fHiu settled: actual batch cost $4.4864; run spend $34.5010
+17:13:48 [batch] submitted msgbatch_01ENXSJaiZAmTZ4XjcLd6qBh: 1000 requests, reserved worst-case $16.20 (spent $34.50, reserved $16.20)
+17:13:48 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:14:19 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:14:50 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:15:20 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:15:51 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:16:21 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:16:52 [batch] 1 in flight; processing=1000 succeeded=0 errored=0
+17:21:17 [batch] ingested 1000 results from msgbatch_01ENXSJaiZAmTZ4XjcLd6qBh
+17:21:18 [batch] msgbatch_01ENXSJaiZAmTZ4XjcLd6qBh settled: actual batch cost $4.8454; run spend $39.5628
+17:21:19 [batch] submitted msgbatch_01HC7yarmjE3T6EAGn6qTqMr: 410 requests, reserved worst-case $6.62 (spent $39.56, reserved $6.62)
+17:21:20 [batch] 1 in flight; processing=410 succeeded=0 errored=0
+17:21:50 [batch] 1 in flight; processing=410 succeeded=0 errored=0
+17:22:21 [batch] 1 in flight; processing=410 succeeded=0 errored=0
+17:22:51 [batch] 1 in flight; processing=410 succeeded=0 errored=0
+17:23:22 [batch] 1 in flight; processing=410 succeeded=0 errored=0
+17:23:53 [batch] 1 in flight; processing=410 succeeded=0 errored=0
+17:25:54 [batch] ingested 410 results from msgbatch_01HC7yarmjE3T6EAGn6qTqMr
+17:25:54 [batch] msgbatch_01HC7yarmjE3T6EAGn6qTqMr settled: actual batch cost $1.7902; run spend $41.4337
+17:25:55 [batch] stop_reason=completed; checkpoint runs/full/checkpoints/after_enrich_20261004T163138.json
+17:26:11 {
+17:26:11  "run_id": "20261004T163138",
+17:26:11  "partial": false,
+17:26:11  "wall_clock_s": 3270.227,
+17:26:11  "record_statuses": {
+17:26:11   "completed": 660591,
+17:26:11   "quarantined": 31
+17:26:11  },
+17:26:11  "spend_this_invocation_usd": 41.433746
+17:26:11 }

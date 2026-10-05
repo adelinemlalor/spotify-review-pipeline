@@ -1,0 +1,43 @@
+16:21:12 [prepare] 660622 rows, 13 empty, 484189 distinct nonempty texts
+16:21:15 [enrich] phase=initial pending_rows=660609 cache_hits=0 distinct_to_send=484189 requests_this_run=9684 workers=4 budget=$3.00
+16:21:41 [enrich] 10/9684 requests saved | distinct ok=500 quarantined=0 | spent $0.1002 | 25s
+16:22:01 [enrich] 20/9684 requests saved | distinct ok=1000 quarantined=0 | spent $0.1803 | 45s
+16:22:24 [enrich] 30/9684 requests saved | distinct ok=1500 quarantined=0 | spent $0.2607 | 69s
+16:22:45 [enrich] 40/9684 requests saved | distinct ok=2000 quarantined=0 | spent $0.3386 | 89s
+16:23:08 [enrich] 50/9684 requests saved | distinct ok=2500 quarantined=0 | spent $0.4186 | 112s
+16:23:31 [enrich] 60/9684 requests saved | distinct ok=3000 quarantined=0 | spent $0.4975 | 136s
+16:23:53 [enrich] 70/9684 requests saved | distinct ok=3500 quarantined=0 | spent $0.5799 | 157s
+16:24:15 [enrich] 80/9684 requests saved | distinct ok=4000 quarantined=0 | spent $0.6573 | 180s
+16:24:37 [enrich] 90/9684 requests saved | distinct ok=4500 quarantined=0 | spent $0.7574 | 202s
+16:24:57 [enrich] 100/9684 requests saved | distinct ok=5000 quarantined=0 | spent $0.8367 | 222s
+16:25:20 [enrich] 110/9684 requests saved | distinct ok=5500 quarantined=0 | spent $0.9137 | 245s
+16:25:41 [enrich] 120/9684 requests saved | distinct ok=6000 quarantined=0 | spent $0.9916 | 266s
+16:26:02 [enrich] 130/9684 requests saved | distinct ok=6500 quarantined=0 | spent $1.0680 | 287s
+16:26:24 [enrich] 140/9684 requests saved | distinct ok=7000 quarantined=0 | spent $1.1469 | 309s
+16:26:47 [enrich] 150/9684 requests saved | distinct ok=7500 quarantined=0 | spent $1.2255 | 332s
+16:27:12 [enrich] 160/9684 requests saved | distinct ok=8000 quarantined=0 | spent $1.3059 | 357s
+16:27:34 [enrich] 170/9684 requests saved | distinct ok=8500 quarantined=0 | spent $1.3852 | 378s
+16:27:56 [enrich] 180/9684 requests saved | distinct ok=9000 quarantined=0 | spent $1.4660 | 400s
+16:28:15 [enrich] 190/9684 requests saved | distinct ok=9500 quarantined=0 | spent $1.5425 | 420s
+16:28:40 [enrich] 200/9684 requests saved | distinct ok=10000 quarantined=0 | spent $1.6238 | 445s
+16:29:03 [enrich] 210/9684 requests saved | distinct ok=10500 quarantined=0 | spent $1.7040 | 468s
+16:29:25 [enrich] 220/9684 requests saved | distinct ok=11000 quarantined=0 | spent $1.7866 | 490s
+16:29:48 [enrich] 230/9684 requests saved | distinct ok=11500 quarantined=0 | spent $1.8689 | 512s
+16:30:13 [enrich] 240/9684 requests saved | distinct ok=12000 quarantined=0 | spent $1.9523 | 538s
+16:30:38 [enrich] 250/9684 requests saved | distinct ok=12500 quarantined=0 | spent $2.0342 | 562s
+16:30:58 [enrich] 260/9684 requests saved | distinct ok=13000 quarantined=0 | spent $2.1169 | 583s
+16:31:19 [enrich] 270/9684 requests saved | distinct ok=13500 quarantined=0 | spent $2.1985 | 604s
+16:31:23 
+16:31:23 [enrich] interrupt received: finishing in-flight requests, saving, then stopping (press Ctrl-C again to abort hard)
+16:31:28 [enrich] stop_reason=interrupted_by_user; checkpoint saved to runs/full/checkpoints/after_enrich_20261004T162102.json
+16:31:29 {
+16:31:29  "run_id": "20261004T162102",
+16:31:29  "partial": true,
+16:31:29  "wall_clock_s": 626.42,
+16:31:29  "record_statuses": {
+16:31:29   "completed": 131385,
+16:31:29   "pending": 529224,
+16:31:29   "quarantined": 13
+16:31:29  },
+16:31:29  "spend_this_invocation_usd": 2.229841
+16:31:29 }

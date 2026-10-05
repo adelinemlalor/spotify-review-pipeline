@@ -1,0 +1,2 @@
+{"run_id": "20261004T160653", "stage": "prepare", "at": "2026-10-04T23:06:53.973+00:00", "seconds": 0.006, "records": 500, "distinct": 479}
+{"run_id": "20261004T160653", "stage": "enrich", "at": "2026-10-04T23:14:22.020+00:00", "seconds": 448.048, "phase": "initial", "checkpoint": "runs/batch_api_test_500/checkpoints/after_enrich_20261004T160653.json", "chunks_submitted": 3, "stop_reason": "completed", "spent_usd": 0.044087999999999995}

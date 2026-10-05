@@ -1,0 +1,12 @@
+{"run_id": "20261004T160324", "stage": "prepare", "at": "2026-10-04T23:03:24.629+00:00", "seconds": 0.003, "records": 100, "distinct": 100}
+{"run_id": "20261004T160324", "stage": "enrich", "at": "2026-10-04T23:03:41.306+00:00", "seconds": 16.677, "phase": "initial", "cache_hits": 0, "requests": 2, "distinct_completed": 100, "distinct_quarantined": 0, "spent_usd": 0.0208407, "stop_reason": "completed", "fallback_used": 0, "fallback_cap": 0, "checkpoint": "/Users/adelinelalor/Documents/Courses/Fundamentals of Agentic AI/Assignment 5/runs/pilot_100/checkpoints/after_enrich_20261004T160324.json"}
+{"run_id": "20261004T160324", "stage": "verify", "at": "2026-10-04T23:03:43.658+00:00", "seconds": 2.345, "compared": 20, "agreement": {"topic": 0.85, "intent": 0.9, "severity": 0.9, "all3": 0.85}}
+{"run_id": "20261004T160324", "stage": "group", "at": "2026-10-04T23:03:50.491+00:00", "seconds": 6.832, "issues": 16}
+{"run_id": "20261004T160324", "stage": "rank", "at": "2026-10-04T23:03:50.498+00:00", "seconds": 0.007, "issues": 16}
+{"run_id": "20261004T160324", "stage": "memo", "at": "2026-10-04T23:04:03.587+00:00", "seconds": 13.088, "check_passed": true}
+{"run_id": "20261004T160403", "stage": "prepare", "at": "2026-10-04T23:04:03.811+00:00", "seconds": 0.001, "records": 100, "distinct": 100}
+{"run_id": "20261004T160403", "stage": "enrich", "at": "2026-10-04T23:04:03.811+00:00", "seconds": 0.0, "phase": "resume", "cache_hits": 0, "requests": 0, "stop_reason": "nothing_pending"}
+{"run_id": "20261004T160403", "stage": "verify", "at": "2026-10-04T23:04:03.814+00:00", "seconds": 0.001, "compared": 20, "agreement": {"topic": 0.85, "intent": 0.9, "severity": 0.9, "all3": 0.85}}
+{"run_id": "20261004T160403", "stage": "group", "at": "2026-10-04T23:04:03.815+00:00", "seconds": 0.001, "issues": 16}
+{"run_id": "20261004T160403", "stage": "rank", "at": "2026-10-04T23:04:03.816+00:00", "seconds": 0.001, "issues": 16}
+{"run_id": "20261004T160403", "stage": "memo", "at": "2026-10-04T23:04:03.818+00:00", "seconds": 0.001, "check_passed": true}
