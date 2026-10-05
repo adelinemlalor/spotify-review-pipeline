@@ -324,7 +324,7 @@ def run_enrich(con, run_dir, run_id, budget, workers=1, max_requests=None, phase
                     done_req += 1
                     done_ok += sum(o[0] == "completed" for o in result["outcomes"].values())
                     done_q += sum(o[0] == "quarantined" for o in result["outcomes"].values())
-                    if done_req % 10 == 0 or done_req == len(requests):
+                    if done_req % 10 == 0 or done_req == len(requests) or len(requests) <= 50:
                         el = time.monotonic() - t0
                         print(f"[enrich] {done_req}/{len(requests)} requests saved | distinct ok={done_ok} "
                               f"quarantined={done_q} | spent ${ledger.spent_this_run:.4f} | {el:.0f}s")

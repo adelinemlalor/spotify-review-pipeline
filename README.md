@@ -23,7 +23,7 @@ its own versioned prompt, inputs, outputs and saved evidence.
 | Golden 50 (author's hand labels) | topic **0.88**, intent **0.84**, severity **0.82** (within-1 0.98, MAE 0.20), all three 0.70; 14 ambiguous | [Golden 50](#golden-50-evaluation) |
 | Full-run cost (measured, from provider usage × [rates](cost/rates.csv)) | **$43.98**: enrichment $43.68 (batch $39.69, realtime $2.18, retries $1.42, fallback $0.37, repair $0.01) + verify $0.22, group $0.02, memo $0.06 · consolidated in [`full_run_summary.json`](runs/full/full_run_summary.json), manifest in [`run_manifest.json`](runs/full/run_manifest.json) | [`grading/calls.jsonl.gz`](grading/calls.jsonl.gz), [`runs/full/run_summary_*.json`](runs/full/) |
 | Full-run time (clock) | initial phase 626 s (realtime, 4 workers, interrupted) + resume 3,270 s (Message Batches) + downstream 127 s ≈ **67 min** | [`runs/full/terminal_*.log`](runs/full/) |
-| All API spend for the assignment | $45.72 (pilot $0.064, 500 $0.129, 10k $1.497, batch-API test $0.044, system tests $0.003, full $43.98) plus <$0.01 of untracked key smoke tests | per-run `state.db` → `calls` |
+| All API spend for the assignment | about $46.10 (pilot $0.064, 500 $0.129, 10k $1.497, batch-API test $0.044, system tests $0.003, full $43.98, recording demos about $0.38) plus <$0.01 of untracked key smoke tests | per-run `state.db` → `calls` |
 | Zero-API self-check | `working_coverage_point_candidate: 1.0`, labelable completion 1.0; status `review_required` for one explained item (below) | [`docs/self-check-summary.md`](docs/self-check-summary.md) |
 
 ## Rubric → evidence map
@@ -255,7 +255,18 @@ politically motivated reviews.
    cache_hits 0, **470,489 distinct pending texts** (no completed text re-sent), 10 batches. The final checkpoint
    [`checkpoint_after.json`](grading/checkpoint_after.json) has **660,609 completed IDs** (taken after the repair pass). Every resume call lists only
    IDs that were not in `checkpoint_before` (the checker's `reprocessed_checkpoint` reports 0).
-3. **Warm rerun of the pilot:** 0 new enrichment, verify, group or memo calls; 0.11 s; $0.
+3. **Screen recording** ([`docs/recording/interruption_resume_demo.mov`](docs/recording/interruption_resume_demo.mov),
+   [transcript](docs/recording/terminal_transcript.txt), checkpoints in
+   [`runs/recording_demo_500/checkpoints/`](runs/recording_demo_500/checkpoints)): a fresh 500-review run
+   (`bash evals/recording_demo.sh`). The operator interrupts it at 3/10 requests (Enter makes the script send SIGINT,
+   the same signal as Ctrl-C). The pipeline finishes the in-flight request and saves **215 completed** (4 calls). The
+   resume sends only the 285 pending rows (279 distinct texts, 6 calls), ending at **500 completed**, with 0 resume
+   calls containing already-completed IDs. A first recording attempt failed because Ctrl-C typed into the app's terminal
+   panel did not reach the script's child process, which is why the demo uses an explicit SIGINT. The final video
+   records only the terminal area. Demo attempts (two test runs and three recordings) cost
+   about $0.38 in total. Only the final attempt's database is kept, and earlier attempts' costs come from their terminal
+   output.
+4. **Warm rerun of the pilot:** 0 new enrichment, verify, group or memo calls; 0.11 s; $0.
 
 ## Self-check notes
 

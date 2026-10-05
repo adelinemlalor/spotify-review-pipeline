@@ -1,0 +1,41 @@
+Terminal transcript of the screen-recorded interruption/resume demo (interruption_resume_demo.mov), copied from the terminal panel.
+Command: bash evals/recording_demo.sh   (500 development reviews from data/checkpoint_500.csv, 1 worker)
+
+=== RUN 1 (initial): 500 reviews, 1 worker ===
+>>> Press Enter after a few requests are saved to INTERRUPT the run (sends SIGINT, the same signal as Ctrl-C).
+[prepare] 500 rows, 0 empty, 479 distinct nonempty texts
+[enrich] phase=initial pending_rows=500 cache_hits=0 distinct_to_send=479 requests_this_run=10 workers=1 budget=$0.50
+[enrich] 1/10 requests saved | distinct ok=50 quarantined=0 | spent $0.0134 | 9s
+[enrich] 2/10 requests saved | distinct ok=100 quarantined=0 | spent $0.0208 | 16s
+[enrich] 3/10 requests saved | distinct ok=150 quarantined=0 | spent $0.0286 | 24s
+
+>>> 20:11:59 operator interrupt: sending SIGINT to pipeline process 12064
+
+[enrich] interrupt received: finishing in-flight requests, saving, then stopping (press Ctrl-C again to abort hard)
+[enrich] 4/10 requests saved | distinct ok=200 quarantined=0 | spent $0.0369 | 33s
+[enrich] stop_reason=interrupted_by_user; checkpoint saved to runs/recording_demo_500/checkpoints/after_enrich_20261004T201133.json
+{"run_id": "20261004T201133", "partial": true, "wall_clock_s": 34.048, "record_statuses": {"completed": 215, "pending": 285}, "spend_this_invocation_usd": 0.03685}
+
+=== SAVED STATE AFTER INTERRUPTION ===
+  completed records: 215
+  enrichment calls so far: 4
+  checkpoint: runs/recording_demo_500/checkpoints/after_enrich_20261004T201133.json
+Press Enter to resume...
+=== RUN 2 (resume): only pending reviews are sent ===
+[prepare] source already loaded (500 rows); skipping re-ingest
+[enrich] phase=resume pending_rows=285 cache_hits=0 distinct_to_send=279 requests_this_run=6 workers=1 budget=$0.50
+[enrich] 1/6 requests saved | distinct ok=50 quarantined=0 | spent $0.0075 | 7s
+[enrich] 2/6 requests saved | distinct ok=100 quarantined=0 | spent $0.0159 | 16s
+[enrich] 3/6 requests saved | distinct ok=150 quarantined=0 | spent $0.0232 | 23s
+[enrich] 4/6 requests saved | distinct ok=200 quarantined=0 | spent $0.0308 | 31s
+[enrich] 5/6 requests saved | distinct ok=250 quarantined=0 | spent $0.0391 | 40s
+[enrich] 6/6 requests saved | distinct ok=279 quarantined=0 | spent $0.0437 | 45s
+[enrich] stop_reason=completed; checkpoint saved to runs/recording_demo_500/checkpoints/after_enrich_20261004T201209.json
+{"run_id": "20261004T201209", "partial": false, "wall_clock_s": 45.01, "record_statuses": {"completed": 500}, "spend_this_invocation_usd": 0.043736}
+
+=== FINAL STATE ===
+  completed records: 500
+  enrichment calls so far: 10
+  completed before interruption: 215  after resume: 500  before ⊂ after: True
+  enrichment calls: initial=4 resume=6; resume calls containing already-completed IDs: 0
+=== DEMO COMPLETE ===
